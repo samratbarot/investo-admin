@@ -14,4 +14,4 @@ const Card = () => {
     </li>
   );
 };
-export default Card
+export default Card;
