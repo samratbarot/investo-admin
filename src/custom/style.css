@@ -1,0 +1,9 @@
+.glide__slides{
+  width: 100%;
+ 
+}
+.glide__slides .glide__slide{
+ list-style: none;
+ display: inline-block;
+
+}
