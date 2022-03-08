@@ -2,18 +2,18 @@ import { adminRoot } from './defaultValues';
 
 const data = [
   {
-    id: 'gogo',
-    icon: 'iconsminds-home',
+    id: 'menu',
+    icon: 'iconsminds-shop-4',
     label: 'menu.menu',
-    to: `${adminRoot}/gogo`,
+    to: `${adminRoot}/`,
     subs: [
       {
-        icon: 'simple-icon-paper-plane',
+        icon: 'simple-icon-home',
         label: 'menu.dashboard',
         to: `${adminRoot}/gogo/start`,
       },
       {
-        icon: 'simple-icon-paper-plane',
+        icon: 'simple-icon-dollar-sign',
         label: 'menu.market',
         to: `${adminRoot}/gogo/start`,
       },
@@ -21,58 +21,70 @@ const data = [
   },
   {
     id: 'secondmenu',
-    icon: 'iconsminds-three-arrow-fork',
+    icon: 'iconsminds-user',
     label: 'menu.second-menu',
     to: `${adminRoot}/second-menu`,
     // roles: [UserRole.Admin, UserRole.Editor],
     subs: [
       {
-        icon: 'simple-icon-paper-plane',
+        icon: 'iconsminds-male-female',
         label: 'menu.customer_list',
         to: `${adminRoot}/second-menu/second`,
       },
       {
-        icon: 'simple-icon-paper-plane',
+        icon: 'iconsminds-wallet',
         label: 'menu.account_list',
-        to: `${adminRoot}/second-menu/second`,
+        to: `${adminRoot}/second-menu/second/account`,
       },
       {
-        icon: 'simple-icon-paper-plane',
+        icon: 'iconsminds-monitor-analytics',
         label: 'menu.activities ',
-        to: `${adminRoot}/second-menu/second`,
+        to: `${adminRoot}/second-menu/second/activies`,
       },
     ],
   },
   {
     id: 'blankpage',
-    icon: 'iconsminds-bucket',
+    icon: 'iconsminds-repeat',
     label: 'menu.order-list',
-    to: `${adminRoot}/blank-page`,
+    to: `${adminRoot}/order`,
+  
   },
   {
     id: 'request',
-    icon: 'iconsminds-library',
+    icon: 'iconsminds-up---down',
     label: 'menu.request',
-    to: 'https://gogo-react-docs.coloredstrategies.com/',
-    newWindow: true,
+    to: `${adminRoot}/request-menu`,
+    subs: [
+      {
+        icon: 'iconsminds-up',
+        label: 'menu.diposite',
+        to: `${adminRoot}/request-menu/request`,
+      },
+      {
+        icon: 'iconsminds-down',
+        label: 'menu.withdraw',
+        to: `${adminRoot}/request-menu/request/withdraw`,
+      },
+     
+    ],
   },
   {
     id: 'report',
-    icon: 'iconsminds-library',
+    icon: 'iconsminds-digital-drawing',
     label: 'menu.report',
-    to: 'https://gogo-react-docs.coloredstrategies.com/',
-    newWindow: true,
+    to: `${adminRoot}/report`,
+  
   },
   {
     id: 'ipo',
-    icon: 'iconsminds-library',
+    icon: 'iconsminds-idea',
     label: 'menu.ipo',
-    to: 'https://gogo-react-docs.coloredstrategies.com/',
-    newWindow: true,
+    to: `${adminRoot}/ipo`,
   },
   {
     id: 'setting',
-    icon: 'iconsminds-library',
+    icon: 'iconsminds-gear',
     label: 'menu.setting',
     to: 'https://gogo-react-docs.coloredstrategies.com/',
     newWindow: true,

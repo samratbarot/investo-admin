@@ -41,6 +41,8 @@ module.exports = {
   'menu.customer_list': 'Customer list',
   'menu.account_list': 'Account  list',
   'menu.activities':'Activities',
+  'menu.diposite':'Diposite',
+  'menu.withdraw':'Withdraw',
   'menu.ui': 'UI',
   'menu.charts': 'Charts',
   'menu.chat': 'Chat',

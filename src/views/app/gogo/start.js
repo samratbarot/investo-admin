@@ -4,8 +4,9 @@ import { Colxx, Separator } from 'components/common/CustomBootstrap';
 import Breadcrumb from 'containers/navs/Breadcrumb';
 import { NavLink } from 'react-router-dom';
 import PerfectScrollbar from 'react-perfect-scrollbar';
+import Area from 'components/charts/Area';
 import Card from './dashboard-card/Card';
-
+import {areaChartData} from '../../../data/charts'
 // import Chart from './dashboard-card/Chart';
 
 const Start = ({ match }) => (
@@ -26,6 +27,7 @@ const Start = ({ match }) => (
                   <div className="glide dashboard-numbers ">
                     <div className="glide__track" data-glide-el="track">
                       <ul className="glide__slides">
+                        <Card />
                         <Card />
                         <Card />
                         <Card />
@@ -65,12 +67,12 @@ const Start = ({ match }) => (
                         </div>
                       </div>
 
-                      {/* <div className="card-body">
+                      <div className="card-body">
                         <h5 className="card-title">Sales</h5>
                         <div className="dashboard-line-chart chart">
-                          {/* <Chart/> 
+                        <Area data={areaChartData} /> 
                         </div>
-                      </div> */}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -78,9 +80,9 @@ const Start = ({ match }) => (
                   <div className="col-md-12 col-lg-4 mb-4">
                     <div className="card h-100">
                       <div className="card-body">
-                        <h5 className="card-title">Product Categories</h5>
+                        <h5 className="card-title">Top stocks</h5>
                         <div className="dashboard-donut-chart chart">
-                          <canvas id="polarChart">this is chart</canvas>
+                        this is chart
                         </div>
                       </div>
                     </div>
@@ -88,7 +90,7 @@ const Start = ({ match }) => (
                   <div className="col-md-6 col-lg-4 mb-4">
                     <div className="card">
                       <div className="card-body">
-                        <h5 className="card-title">Logs</h5>
+                        <h5 className="card-title">Top customer</h5>
 
                         <div className="scroll dashboard-logs">
                           <table className="table table-sm table-borderless">
@@ -254,7 +256,7 @@ const Start = ({ match }) => (
                   <div className="col-md-6 col-lg-4 mb-4">
                     <div className="card">
                       <div className="card-body">
-                        <h5 className="card-title">Tickets</h5>
+                        <h5 className="card-title">Top activities</h5>
 
                         <div className="scroll dashboard-list-with-user">
                                 <PerfectScrollbar

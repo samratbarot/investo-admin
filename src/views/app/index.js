@@ -11,8 +11,17 @@ const Gogo = React.lazy(() =>
 const SecondMenu = React.lazy(() =>
   import(/* webpackChunkName: "viwes-second-menu" */ './second-menu')
 );
-const BlankPage = React.lazy(() =>
-  import(/* webpackChunkName: "viwes-blank-page" */ './blank-page')
+const OrderPage = React.lazy(() =>
+  import(/* webpackChunkName: "viwes-order-page" */ './order-list')
+);
+const RequestPage = React.lazy(() =>
+  import(/* webpackChunkName: "viwes-order-page" */ './request')
+);
+const ReportPage = React.lazy(() =>
+  import(/* webpackChunkName: "viwes-order-page" */ './report')
+);
+const IpoPage = React.lazy(() =>
+  import(/* webpackChunkName: "viwes-order-page" */ './ipo')
 );
 
 const App = ({ match }) => {
@@ -30,14 +39,27 @@ const App = ({ match }) => {
               path={`${match.url}/second-menu`}
               render={(props) => <SecondMenu {...props} />}
             />
+
             {/* <ProtectedRoute
                     path={`${match.url}/second-menu`}
                     component={SecondMenu}
                     roles={[UserRole.Admin]}
             /> */}
             <Route
-              path={`${match.url}/blank-page`}
-              render={(props) => <BlankPage {...props} />}
+              path={`${match.url}/order`}
+              render={(props) => <OrderPage {...props} />}
+            />
+            <Route
+              path={`${match.url}/request-menu`}
+              render={(props) => <RequestPage {...props} />}
+            />
+             <Route
+              path={`${match.url}/report`}
+              render={(props) => <ReportPage {...props} />}
+            />
+            <Route
+              path={`${match.url}/ipo`}
+              render={(props) => <IpoPage {...props} />}
             />
             <Redirect to="/error" />
           </Switch>
