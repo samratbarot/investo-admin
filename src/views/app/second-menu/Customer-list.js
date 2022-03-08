@@ -5,7 +5,7 @@ import { Colxx, Separator } from 'components/common/CustomBootstrap';
 import Breadcrumb from 'containers/navs/Breadcrumb';
 import { NavLink } from 'react-router-dom';
 
-const Second = ({ match }) => {
+const CustromerList = ({ match }) => {
   const [show, setShow] = useState({
     pageDropDown: false,
   });
@@ -424,4 +424,4 @@ const Second = ({ match }) => {
     </>
   );
 };
-export default Second;
+export default CustromerList;

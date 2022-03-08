@@ -5,7 +5,7 @@ import { Colxx, Separator } from 'components/common/CustomBootstrap';
 import Breadcrumb from 'containers/navs/Breadcrumb';
 import { NavLink } from 'react-router-dom';
 
-const Second = ({ match }) => {
+const Withdraw = ({ match }) => {
   const [show, setShow] = useState({
     pageDropDown: false,
   });
@@ -13,9 +13,9 @@ const Second = ({ match }) => {
     <>
       <Row>
         <Colxx xxs="12">
-          <Breadcrumb heading="Customer list" match={match} />
+          <Breadcrumb heading="Withdraw" match={match} />
           <div className="top-right-button-container">
-                            <button type="button" className="btn btn-primary btn-lg top-right-button mr-1">ADD NEW</button>
+                            <button type="button" className="btn btn-primary btn-lg top-right-button mr-1">Withdraw</button>
                             <div className="btn-group">
                                 <div className="btn btn-primary btn-lg pl-4 pr-0 check-button">
                                     <div className="custom-control custom-checkbox mb-0 d-inline-block">
@@ -424,4 +424,4 @@ const Second = ({ match }) => {
     </>
   );
 };
-export default Second;
+export default Withdraw;
