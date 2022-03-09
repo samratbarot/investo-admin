@@ -7,3 +7,19 @@
  display: inline-block;
 
 }
+.not-verified{
+  background-color:#E0A800 !important;   
+}
+.verified{
+  background-color:#6FB327 !important;
+}
+.deactivate{
+  background-color:#17A2B8 !important;
+}
+.delete{
+  background-color:#C82333 !important;
+}
+.registred{
+  background-color:#4556AC !important;
+
+}

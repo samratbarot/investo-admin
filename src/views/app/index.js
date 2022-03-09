@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { Route, withRouter, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-
+import '../../custom/style.css'
 import AppLayout from 'layout/AppLayout';
 // import { ProtectedRoute, UserRole } from 'helpers/authHelper';
 
