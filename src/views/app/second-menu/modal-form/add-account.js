@@ -1,8 +1,7 @@
 import React from 'react';
-import { Label, Input } from 'reactstrap';
+import {Label,Input} from 'reactstrap'
 
-
-const AddCustomer = ({ show, setShow }) => {
+const AddAccount = ({ show, setShow }) => {
   return (
     <>
       <div
@@ -11,10 +10,8 @@ const AddCustomer = ({ show, setShow }) => {
           position: 'relative',
           zIndex: 1050,
           display: show ? 'block' : 'none',
-          height: '10vh'
         }}
       >
-
         <div className="modal-right">
           <div
             className="modal fade show"
@@ -22,14 +19,10 @@ const AddCustomer = ({ show, setShow }) => {
             tabIndex="-1"
             style={{ display: 'block' }}
           >
-            <div
-              className="modal-dialog"
-              role="document"
-              style={{ height: '100vh' }}
-            >
+            <div className="modal-dialog" role="document">
               <div className="modal-content">
                 <div className="modal-header">
-                  <h5 className="modal-title">Add Customer</h5>
+                  <h5 className="modal-title">Add Account</h5>
                   <button type="button" className="close" aria-label="Close">
                     <span aria-hidden="true" onClick={() => setShow(false)}>
                       {' '}
@@ -38,22 +31,28 @@ const AddCustomer = ({ show, setShow }) => {
                   </button>
                 </div>
                 <div className="modal-body">
-                  <Label className="">First Name</Label>
+                  <Label className="">Customer Name</Label>
+                  <Input type="text" className="form-controller" placeholder='Search customer'/>
+                  <Label className="mt-4">National ID</Label>
                   <Input type="text" className="form-controller" />
-                  <Label className="mt-4">Lastname</Label>
+                   <Label className="mt-4">Customer type</Label>
+                    <p>---customer type select remain----</p>
+                  <Label className="mt-4">Phone number</Label>
                   <Input type="text" className="form-controller" />
                   <Label className="mt-4">Email</Label>
                   <Input type="text" className="form-controller" />
-                  <Label className="mt-4">Phone number</Label>
-                  <Input type="text" className="form-controller" />
-                  <Label className="mt-4">Profile image</Label>
-                  <Input type="file" className="form-controller" />
-                  <Label className="mt-4">Password</Label>
-                  <Input type="text" className="form-controller" />
-                  <Label className="mt-4">Repeat password</Label>
-                  <Input type="text" className="form-controller" />
-             
-                  {/* </PerfectScrollbar> */}
+                  <Label className="mt-4">Registration Payment Method</Label>
+                  <p>---payment type select remain----</p>
+
+                  <Label className="mt-4">Whether to participate in foreign and domestic trade</Label>
+                  <p>---domestic trade type select remain----</p>
+                  <Label className="mt-4">Whether to participate in foreign and domestic trade</Label>
+                  <p>---domestic trade type select remain----</p>
+                  <Label className="mt-4">Whether to participate in foreign and domestic trade</Label>
+                  <p>---domestic trade type select remain----</p>
+                  <Label className="mt-4">Whether to participate in foreign and domestic trade</Label>
+                  <p>---domestic trade type select remain----</p>
+
                 </div>
                 <div className="modal-footer">
                   <button type="button" className="btn btn-outline-secondary">
@@ -68,9 +67,8 @@ const AddCustomer = ({ show, setShow }) => {
           </div>
           <div className="modal-backdrop fade show" />
         </div>
-   
       </div>
     </>
   );
 };
-export default AddCustomer;
+export default AddAccount;
