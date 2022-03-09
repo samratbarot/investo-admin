@@ -27,6 +27,7 @@ const CustomerDetailsPage=React.lazy(() =>
        import(/* webpackChunkName: "viwes-order-page" */ './customer-details')
 )
 
+
 const App = ({ match }) => {
   return (
     <AppLayout>

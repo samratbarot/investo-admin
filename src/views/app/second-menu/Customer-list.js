@@ -259,53 +259,56 @@ const CustromerList = ({ match }) => {
               </div>
 
               <div className="row">
-                <div className="">
-                  <ul>
-                    <li>Image</li>
-                    <li>Prefix</li>
-                    <li>First name / Last name</li>
-                    <li>Email</li>
-                    <li>Registered date</li>
-                    <li>National ID</li>
-                    <li>Bank account</li>
-                    <li>User balance</li>
-                    <li>Phone</li>
-                    <li>Status</li>
+                <div className="w-90 py-3">
+                  <ul className='d-flex justify-content-between'>
+                    <li className='li'>Image</li>
+                    <li className='li'>Prefix</li>
+                    <li className='li'>First name / Last name</li>
+                    <li className='li'>Email</li>
+                    <li className='li'>Registered date</li>
+                    <li className='li'>National ID</li>
+                    <li className='li'>Bank account</li>
+                    <li className='li'>User balance</li>
+                    <li className='li'>Phone</li>
+                    <li className='li'>Status</li>
                   </ul>
                 </div>
                 <div className="col-12 list" data-check-all="checkAll">
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          image
+                      <p className="mb-0 text-small w-15 u">
+                          U
                         </p>
                         <NavLink
-                          className="list-item-heading mb-0 truncate w-40 w-xs-100"
+
+                          className="list-item-heading mb-0 truncate w-40"
+
+
                           to='/customer-menu/profile'
                         >
-                          56037
+                          56037 <span className='ml-5'>Bat Gerel</span>
                         </NavLink>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        <p className="mb-0 text-muted text-small w-15">
                           gerel@mail.com
                         </p>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        <p className="mb-0 text-muted text-small w-15">
                           05/28/2020
                         </p>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        <p className="mb-0 text-muted text-small w-15">
                           УШ67172808
                         </p>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        <p className="mb-0 text-muted text-small w-15">
                           5011234567
                         </p>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        <p className="mb-0 text-muted text-small w-15">
                           1.000.000₮
                         </p>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        <p className="mb-0 text-muted text-small w-15">
                           91216778
                         </p>
-                        <div className="w-15 w-xs-100">
-                          <span className="badge badge-pill badge-secondary not-verified">
+                        <div className="w-15">
+                          <span className="badge badge-pill badge-secondary not-verified w-80">
                             NOT VERIFIED
                           </span>
                         </div>
@@ -323,14 +326,14 @@ const CustromerList = ({ match }) => {
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          image
+                      <p className="mb-0 text-small w-15 w-xs-100 u">
+                          U
                         </p>
                         <NavLink
-                          className="list-item-heading mb-0 truncate w-40 w-xs-100"
+                          className="list-item-heading mb-0 truncate w-30 w-xs-100 ml-1"
                           to="Pages.Product.Detail.html"
                         >
-                          56037
+                          56037 <span className='ml-5'>Bat Gerel</span>
                         </NavLink>
                         <p className="mb-0 text-muted text-small w-15 w-xs-100">
                           gerel@mail.com
@@ -351,7 +354,7 @@ const CustromerList = ({ match }) => {
                           91216778
                         </p>
                         <div className="w-15 w-xs-100">
-                          <span className="badge badge-pill badge-secondary verified">
+                          <span className="badge badge-pill badge-secondary verified w-80">
                             VERIFIED
                           </span>
                         </div>
@@ -369,14 +372,14 @@ const CustromerList = ({ match }) => {
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          image
+                      <p className="mb-0 text-small w-15 w-xs-100 u">
+                          U
                         </p>
                         <NavLink
-                          className="list-item-heading mb-0 truncate w-40 w-xs-100"
+                          className="list-item-heading mb-0 truncate w-30 w-xs-100 ml-1"
                           to="Pages.Product.Detail.html"
                         >
-                          56037
+                          56037 <span className='ml-5'>Bat Gerel</span>
                         </NavLink>
                         <p className="mb-0 text-muted text-small w-15 w-xs-100">
                           gerel@mail.com
@@ -397,7 +400,7 @@ const CustromerList = ({ match }) => {
                           91216778
                         </p>
                         <div className="w-15 w-xs-100">
-                          <span className="badge badge-pill badge-secondary deactivate">
+                          <span className="badge badge-pill badge-secondary deactivate w-80">
                             DEACTIVATED
                           </span>
                         </div>
@@ -415,14 +418,14 @@ const CustromerList = ({ match }) => {
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          image
+                      <p className="mb-0 text-small w-15 w-xs-100 u">
+                          U
                         </p>
                         <NavLink
-                          className="list-item-heading mb-0 truncate w-40 w-xs-100"
+                          className="list-item-heading mb-0 truncate w-30 w-xs-100 ml-1"
                           to="Pages.Product.Detail.html"
                         >
-                          56037
+                          56037 <span className='ml-5'>Bat Gerel</span>
                         </NavLink>
                         <p className="mb-0 text-muted text-small w-15 w-xs-100">
                           gerel@mail.com
@@ -443,7 +446,7 @@ const CustromerList = ({ match }) => {
                           91216778
                         </p>
                         <div className="w-15 w-xs-100">
-                          <span className="badge badge-pill badge-secondary delete">
+                          <span className="badge badge-pill badge-secondary delete w-80">
                             DELETED
                           </span>
                         </div>
@@ -461,14 +464,14 @@ const CustromerList = ({ match }) => {
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          image
+                      <p className="mb-0 text-small w-15 w-xs-100 u">
+                          U
                         </p>
                         <NavLink
-                          className="list-item-heading mb-0 truncate w-40 w-xs-100"
+                          className="list-item-heading mb-0 truncate w-30 w-xs-100 ml-1"
                           to="Pages.Product.Detail.html"
                         >
-                          56037
+                          56037 <span className='ml-5'>Bat Gerel</span>
                         </NavLink>
                         <p className="mb-0 text-muted text-small w-15 w-xs-100">
                           gerel@mail.com
@@ -489,7 +492,7 @@ const CustromerList = ({ match }) => {
                           91216778
                         </p>
                         <div className="w-15 w-xs-100">
-                          <span className="badge badge-pill badge-secondary registred">
+                          <span className="badge badge-pill badge-secondary registred w-80">
                             REGISTERED
                           </span>
                         </div>
