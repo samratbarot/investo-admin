@@ -4,6 +4,7 @@ import { Input, Row } from 'reactstrap';
 import { Colxx, Separator } from 'components/common/CustomBootstrap';
 import Breadcrumb from 'containers/navs/Breadcrumb';
 import { NavLink } from 'react-router-dom';
+import AddAccount from './modal-form/add-account';
 
 const AccountList = ({ match }) => {
   const [show, setShow] = useState();
@@ -20,9 +21,10 @@ const AccountList = ({ match }) => {
           <div className="top-right-button-container">
             <button
               type="button"
+              onClick={() => setShow(true)}
               className="btn btn-primary btn-lg top-right-button mr-1"
             >
-              ADD NEW
+              ADD ACCOUNT
             </button>
             <div className="btn-group">
               <div className="btn btn-primary btn-lg pl-4 pr-0 check-button">
@@ -55,11 +57,11 @@ const AccountList = ({ match }) => {
               >
                 <span className="sr-only">Toggle Dropdown</span>
               </button>
-              <div className="dropdown-menu dropdown-menu-right">
-                <NavLink className="dropdown-item" to="#">
+              <div className="dropdown-menu dropdown-menu-right" style={toggle.checkAll}>
+                <NavLink className="dropdown-item" to="/abc">
                   Action
                 </NavLink>
-                <NavLink className="dropdown-item" to="#">
+                <NavLink className="dropdown-item" to="/cds">
                   Another action
                 </NavLink>
               </div>
@@ -164,20 +166,34 @@ const AccountList = ({ match }) => {
                       </span>
                       <div className="d-block d-md-inline-block">
                         <div className="btn-group float-md-left mr-1 mb-1">
-                          <button
+                        <button
                             className="btn btn-outline-dark btn-xs dropdown-toggle"
                             type="button"
                             data-toggle="dropdown"
                             aria-haspopup="true"
                             aria-expanded="false"
+                            onClick={() =>
+                              setToggle((prev) => {
+                                return {
+                                  ...prev,
+                                  orderBy:
+                                    toggle.orderBy.display === 'none'
+                                      ? { display: 'block' }
+                                      : { display: 'none' },
+                                };
+                              })
+                            }
                           >
                             Order By
                           </button>
-                          <div className="dropdown-menu">
-                            <NavLink className="dropdown-item" to="#">
+                          <div className="dropdown-menu" style={toggle.orderBy}>
+                            <NavLink className="dropdown-item" to="/action">
                               Action
                             </NavLink>
-                            <NavLink className="dropdown-item" to="#">
+                            <NavLink
+                              className="dropdown-item"
+                              to="/another-action"
+                            >
                               Another action
                             </NavLink>
                           </div>
@@ -198,39 +214,38 @@ const AccountList = ({ match }) => {
                         <button
                           className="btn btn-outline-dark btn-xs dropdown-toggle"
                           type="button"
-                          onClick={() =>
-                            setShow((...prev) => {
-                              return show.pageDropDown
-                                ? { ...prev, pageDropDown: false }
-                                : { ...prev, pageDropDown: true };
-                            })
-                          }
                           data-toggle="dropdown"
                           aria-haspopup="true"
                           aria-expanded="false"
+                          onClick={() =>
+                            setToggle((prev) => {
+                              return {
+                                ...prev,
+                                pages:
+                                  toggle.pages.display === 'none'
+                                    ? { display: 'block' }
+                                    : { display: 'none' },
+                              };
+                            })
+                          }
+
                         >
                           20
                         </button>
-                        <div
-                          className={
-                            !show.pageDropDown
-                              ? 'dropdown-menu dropdown-menu-right'
-                              : 'dropdown-menu-right'
-                          }
-                        >
-                          <NavLink className="dropdown-item" to="#">
+                        <div className="dropdown-menu dropdown-menu-right" style={toggle.pages}>
+                          <NavLink className="dropdown-item" to="/a">
                             10
                           </NavLink>
-                          <NavLink className="dropdown-item active" to="#">
+                          <NavLink className="dropdown-item" to="/b">
                             20
                           </NavLink>
-                          <NavLink className="dropdown-item" to="#">
+                          <NavLink className="dropdown-item" to="/c">
                             30
                           </NavLink>
-                          <NavLink className="dropdown-item" to="#">
+                          <NavLink className="dropdown-item" to="/d">
                             50
                           </NavLink>
-                          <NavLink className="dropdown-item" to="#">
+                          <NavLink className="dropdown-item" to="/e">
                             100
                           </NavLink>
                         </div>
@@ -452,6 +467,7 @@ const AccountList = ({ match }) => {
           </section>
         </Colxx>
       </Row>
+      <AddAccount show={show} setShow={setShow}/>
     </>
   );
 };

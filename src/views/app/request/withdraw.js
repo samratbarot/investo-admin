@@ -4,10 +4,14 @@ import { Input, Row } from 'reactstrap';
 import { Colxx, Separator } from 'components/common/CustomBootstrap';
 import Breadcrumb from 'containers/navs/Breadcrumb';
 import { NavLink } from 'react-router-dom';
+import AddWithdraw from './modal-form/add-withdraw';
 
-const Withdraw = ({ match }) => {
-  const [show, setShow] = useState({
-    pageDropDown: false,
+const AccountList = ({ match }) => {
+  const [show, setShow] = useState();
+  const [toggle, setToggle] = useState({
+    orderBy: { display: 'none' },
+    pages: { display: 'none' },
+    checkAll: { display: 'none' },
   });
   return (
     <>
@@ -15,25 +19,54 @@ const Withdraw = ({ match }) => {
         <Colxx xxs="12">
           <Breadcrumb heading="Withdraw" match={match} />
           <div className="top-right-button-container">
-                            <button type="button" className="btn btn-primary btn-lg top-right-button mr-1">Withdraw</button>
-                            <div className="btn-group">
-                                <div className="btn btn-primary btn-lg pl-4 pr-0 check-button">
-                                    <div className="custom-control custom-checkbox mb-0 d-inline-block">
-                                        <input type="checkbox" className="custom-control-input" id="checkAll"/>
-                                        <span className="custom-control-label">&nbsp;</span>
-                                    </div>
-                                </div>
-                                <button type="button"
-                                    className="btn btn-lg btn-primary dropdown-toggle dropdown-toggle-split"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span className="sr-only">Toggle Dropdown</span>
-                                </button>
-                                <div className="dropdown-menu dropdown-menu-right">
-                                    <NavLink className="dropdown-item" to="#">Action</NavLink>
-                                    <NavLink className="dropdown-item" to="#">Another action</NavLink>
-                                </div>
-                            </div>
-                        </div>
+            <button
+              type="button"
+              onClick={() => setShow(true)}
+              className="btn btn-primary btn-lg top-right-button mr-1"
+            >
+              WITHDRAW
+            </button>
+            <div className="btn-group">
+              <div className="btn btn-primary btn-lg pl-4 pr-0 check-button">
+                <div className="custom-control custom-checkbox mb-0 d-inline-block">
+                  <input
+                    type="checkbox"
+                    className="custom-control-input"
+                    id="checkAll"
+                  />
+                  <span className="custom-control-label">&nbsp;</span>
+                </div>
+              </div>
+              <button
+                type="button"
+                className="btn btn-lg btn-primary dropdown-toggle dropdown-toggle-split"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                onClick={() =>
+                  setToggle((prev) => {
+                    return {
+                      ...prev,
+                      checkAll:
+                        toggle.checkAll.display === 'none'
+                          ? { display: 'block' }
+                          : { display: 'none' },
+                    };
+                  })
+                }
+              >
+                <span className="sr-only">Toggle Dropdown</span>
+              </button>
+              <div className="dropdown-menu dropdown-menu-right" style={toggle.checkAll}>
+                <NavLink className="dropdown-item" to="/abc">
+                  Action
+                </NavLink>
+                <NavLink className="dropdown-item" to="/cds">
+                  Another action
+                </NavLink>
+              </div>
+            </div>
+          </div>
           <Separator className="mb-5" />
         </Colxx>
       </Row>
@@ -44,7 +77,6 @@ const Withdraw = ({ match }) => {
               <div className="row">
                 <div className="col-12">
                   <div className="mb-2">
-                
                     <NavLink
                       className="btn pt-0 pl-0 d-inline-block d-md-none"
                       data-toggle="collapse"
@@ -134,20 +166,34 @@ const Withdraw = ({ match }) => {
                       </span>
                       <div className="d-block d-md-inline-block">
                         <div className="btn-group float-md-left mr-1 mb-1">
-                          <button
+                        <button
                             className="btn btn-outline-dark btn-xs dropdown-toggle"
                             type="button"
                             data-toggle="dropdown"
                             aria-haspopup="true"
                             aria-expanded="false"
+                            onClick={() =>
+                              setToggle((prev) => {
+                                return {
+                                  ...prev,
+                                  orderBy:
+                                    toggle.orderBy.display === 'none'
+                                      ? { display: 'block' }
+                                      : { display: 'none' },
+                                };
+                              })
+                            }
                           >
                             Order By
                           </button>
-                          <div className="dropdown-menu">
-                            <NavLink className="dropdown-item" to="#">
+                          <div className="dropdown-menu" style={toggle.orderBy}>
+                            <NavLink className="dropdown-item" to="/action">
                               Action
                             </NavLink>
-                            <NavLink className="dropdown-item" to="#">
+                            <NavLink
+                              className="dropdown-item"
+                              to="/another-action"
+                            >
                               Another action
                             </NavLink>
                           </div>
@@ -168,38 +214,38 @@ const Withdraw = ({ match }) => {
                         <button
                           className="btn btn-outline-dark btn-xs dropdown-toggle"
                           type="button"
-                          onClick={() =>
-                            setShow((...prev) => {
-                              return show.pageDropDown?{ ...prev, pageDropDown:false}:
-                              { ...prev, pageDropDown:true}
-                            })
-                          }
                           data-toggle="dropdown"
                           aria-haspopup="true"
                           aria-expanded="false"
+                          onClick={() =>
+                            setToggle((prev) => {
+                              return {
+                                ...prev,
+                                pages:
+                                  toggle.pages.display === 'none'
+                                    ? { display: 'block' }
+                                    : { display: 'none' },
+                              };
+                            })
+                          }
+
                         >
                           20
                         </button>
-                        <div
-                          className={
-                            !show.pageDropDown
-                              ? 'dropdown-menu dropdown-menu-right'
-                              : 'dropdown-menu-right'
-                          }
-                        >
-                          <NavLink className="dropdown-item" to="#">
+                        <div className="dropdown-menu dropdown-menu-right" style={toggle.pages}>
+                          <NavLink className="dropdown-item" to="/a">
                             10
                           </NavLink>
-                          <NavLink className="dropdown-item active" to="#">
+                          <NavLink className="dropdown-item" to="/b">
                             20
                           </NavLink>
-                          <NavLink className="dropdown-item" to="#">
+                          <NavLink className="dropdown-item" to="/c">
                             30
                           </NavLink>
-                          <NavLink className="dropdown-item" to="#">
+                          <NavLink className="dropdown-item" to="/d">
                             50
                           </NavLink>
-                          <NavLink className="dropdown-item" to="#">
+                          <NavLink className="dropdown-item" to="/e">
                             100
                           </NavLink>
                         </div>
@@ -211,9 +257,9 @@ const Withdraw = ({ match }) => {
 
               <div className="row">
                 <div className="">
-                 <ul>
-                   <li>Image</li>
-                </ul>  
+                  <ul>
+                    <li>Image</li>
+                  </ul>
                 </div>
                 <div className="col-12 list" data-check-all="checkAll">
                   <div className="card d-flex flex-row mb-3">
@@ -421,7 +467,8 @@ const Withdraw = ({ match }) => {
           </section>
         </Colxx>
       </Row>
+      <AddWithdraw show={show} setShow={setShow}/>
     </>
   );
 };
-export default Withdraw;
+export default AccountList;
