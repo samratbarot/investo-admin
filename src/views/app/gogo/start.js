@@ -79,80 +79,94 @@ const Start = ({ match }) => (
                 </div>
                 <div className="row">
                   <div className="col-md-12 col-lg-4 mb-4">
-                    <div className="card h-100">
+                  <div className="card h-100 p-4">
                       <div className="card-body">
                         <h5 className="card-title">Top stocks</h5>
-                        <div className="dashboard-donut-chart chart">
-                          <div className='row'>
-                            <div className='col-lg-3 col-2'>
-                              <img src={Rectangle} alt="Rectangle" />
-                            </div>
-                            <div className='col-lg-3 col-3'>
-                              <p className='mb-0 p1'>Apu</p>
-                              <p className='mb-0 p2'>Хувьцаа</p>
-                            </div>
-                            <div className='col-lg-6 col-7'>
-                              <p className='mb-0 float-right one'>1</p>
-                            </div>
-                          </div>
 
-                          <div className='row mt-2'>
-                            <div className='col-lg-3 col-2'>
-                              <img src={Rectangle} alt="Rectangle" />
-                            </div>
-                            <div className='col-lg-3 col-3'>
-                              <p className='mb-0 p1'>Apu</p>
-                              <p className='mb-0 p2'>Хувьцаа</p>
-                            </div>
-                            <div className='col-lg-6 col-7'>
-                              <p className='mb-0 float-right one'>1</p>
-                            </div>
-                          </div>
+                        <div className="scroll dashboard-logs">
+                          <table className="table table-sm table-borderless">
+                            <tbody>
+                              <div className="scroll" style={{ height: '18rem' }}>
+                                <PerfectScrollbar
+                                  options={{
+                                    suppressScrollX: true,
+                                    wheelPropagation: false,
+                                  }}
+                                >
+                                  <div className='row'>
+                                    <div className='col-lg-3 col-2'>
+                                      <img src={Rectangle} alt="Rectangle" />
+                                    </div>
+                                    <div className='col-lg-3 col-3'>
+                                      <p className='mb-0 p1'>Apu</p>
+                                      <p className='mb-0 p2'>Хувьцаа</p>
+                                    </div>
+                                    <div className='col-lg-6 col-7'>
+                                      <p className='mb-0 float-right one'>1</p>
+                                    </div>
+                                  </div>
 
-                          <div className='row mt-2'>
-                            <div className='col-lg-3 col-2'>
-                              <img src={Rectangle} alt="Rectangle" />
-                            </div>
-                            <div className='col-lg-3 col-3'>
-                              <p className='mb-0 p1'>Apu</p>
-                              <p className='mb-0 p2'>Хувьцаа</p>
-                            </div>
-                            <div className='col-lg-6 col-7'>
-                              <p className='mb-0 float-right one'>1</p>
-                            </div>
-                          </div>
+                                  <div className='row mt-2'>
+                                    <div className='col-lg-3 col-2'>
+                                      <img src={Rectangle} alt="Rectangle" />
+                                    </div>
+                                    <div className='col-lg-3 col-3'>
+                                      <p className='mb-0 p1'>Apu</p>
+                                      <p className='mb-0 p2'>Хувьцаа</p>
+                                    </div>
+                                    <div className='col-lg-6 col-7'>
+                                      <p className='mb-0 float-right one'>1</p>
+                                    </div>
+                                  </div>
 
-                          <div className='row mt-2'>
-                            <div className='col-lg-3 col-2'>
-                              <img src={Rectangle} alt="Rectangle" />
-                            </div>
-                            <div className='col-lg-3 col-3'>
-                              <p className='mb-0 p1'>Apu</p>
-                              <p className='mb-0 p2'>Хувьцаа</p>
-                            </div>
-                            <div className='col-lg-6 col-7'>
-                              <p className='mb-0 float-right one'>1</p>
-                            </div>
-                          </div>
+                                  <div className='row mt-2'>
+                                    <div className='col-lg-3 col-2'>
+                                      <img src={Rectangle} alt="Rectangle" />
+                                    </div>
+                                    <div className='col-lg-3 col-3'>
+                                      <p className='mb-0 p1'>Apu</p>
+                                      <p className='mb-0 p2'>Хувьцаа</p>
+                                    </div>
+                                    <div className='col-lg-6 col-7'>
+                                      <p className='mb-0 float-right one'>1</p>
+                                    </div>
+                                  </div>
 
-                          <div className='row mt-2'>
-                            <div className='col-lg-3 col-2'>
-                              <img src={Rectangle} alt="Rectangle" />
-                            </div>
-                            <div className='col-lg-3 col-3'>
-                              <p className='mb-0 p1'>Apu</p>
-                              <p className='mb-0 p2'>Хувьцаа</p>
-                            </div>
-                            <div className='col-lg-6 col-7'>
-                              <p className='mb-0 float-right one'>1</p>
-                            </div>
-                          </div>
+                                  <div className='row mt-2'>
+                                    <div className='col-lg-3 col-2'>
+                                      <img src={Rectangle} alt="Rectangle" />
+                                    </div>
+                                    <div className='col-lg-3 col-3'>
+                                      <p className='mb-0 p1'>Apu</p>
+                                      <p className='mb-0 p2'>Хувьцаа</p>
+                                    </div>
+                                    <div className='col-lg-6 col-7'>
+                                      <p className='mb-0 float-right one'>1</p>
+                                    </div>
+                                  </div>
+
+                                  <div className='row mt-2'>
+                                    <div className='col-lg-3 col-2'>
+                                      <img src={Rectangle} alt="Rectangle" />
+                                    </div>
+                                    <div className='col-lg-3 col-3'>
+                                      <p className='mb-0 p1'>Apu</p>
+                                      <p className='mb-0 p2'>Хувьцаа</p>
+                                    </div>
+                                    <div className='col-lg-6 col-7'>
+                                      <p className='mb-0 float-right one'>1</p>
+                                    </div>
+                                  </div>
+                                </PerfectScrollbar>
+                              </div>
+                            </tbody>
+                          </table>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className="col-md-6 col-lg-4 mb-4">
-                    <div className="card h-100">
+                    <div className="card h-100 p-4">
                       <div className="card-body">
                         <h5 className="card-title">Top customer</h5>
 
@@ -239,7 +253,7 @@ const Start = ({ match }) => (
                     </div>
                   </div>
                   <div className="col-md-6 col-lg-4 mb-4">
-                    <div className="card h-100">
+                    <div className="card h-100 p-4">
                       <div className="card-body">
                         <h5 className="card-title">Top activities</h5>
 

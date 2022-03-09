@@ -1,23 +1,22 @@
 import React, { useState } from 'react';
-import { Input, Row } from 'reactstrap';
+import { Row } from 'reactstrap';
 // import IntlMessages from 'helpers/IntlMessages';
 import { Colxx, Separator } from 'components/common/CustomBootstrap';
 import Breadcrumb from 'containers/navs/Breadcrumb';
 import { NavLink } from 'react-router-dom';
+import orderimg from '../../../assets/logos/Rectangle 130.png';
 
 const AccountList = ({ match }) => {
-  
   const [toggle, setToggle] = useState({
     orderBy: { display: 'none' },
     pages: { display: 'none' },
-  
   });
   return (
     <>
       <Row>
         <Colxx xxs="12">
           <Breadcrumb heading="Activities " match={match} />
-         
+
           <Separator className="mb-5" />
         </Colxx>
       </Row>
@@ -117,7 +116,7 @@ const AccountList = ({ match }) => {
                       </span>
                       <div className="d-block d-md-inline-block">
                         <div className="btn-group float-md-left mr-1 mb-1">
-                        <button
+                          <button
                             className="btn btn-outline-dark btn-xs dropdown-toggle"
                             type="button"
                             data-toggle="dropdown"
@@ -179,11 +178,13 @@ const AccountList = ({ match }) => {
                               };
                             })
                           }
-
                         >
                           20
                         </button>
-                        <div className="dropdown-menu dropdown-menu-right" style={toggle.pages}>
+                        <div
+                          className="dropdown-menu dropdown-menu-right"
+                          style={toggle.pages}
+                        >
                           <NavLink className="dropdown-item" to="/a">
                             10
                           </NavLink>
@@ -207,164 +208,84 @@ const AccountList = ({ match }) => {
               </div>
 
               <div className="row">
-                <div className="">
-                  <ul>
-                    <li>Image</li>
+                <div className="w-90 py-3">
+                  <ul className="d-flex justify-content-between">
+                    <li className="li">Prefix</li>
+                    <li className="li">First name / Last name</li>
+                    <li className="li">Email</li>
+                    <li className="li">User balance</li>
+                    <li className="li">Activity</li>
+                    <li className="li">Stock Amount</li>
+                    <li className="li">Fee</li>
+                    <li className="li">Owned Stock</li>
                   </ul>
                 </div>
                 <div className="col-12 list" data-check-all="checkAll">
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                        <NavLink
-                          className="list-item-heading mb-0 truncate w-40 w-xs-100"
-                          to="Pages.Product.Detail.html"
-                        >
-                          Marble Cake
-                        </NavLink>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          Cakes
+                        <p className="mb-0 text-muted text-small w-12 w-xs-100 pl-3 ">
+                          56037
                         </p>
                         <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          02.04.2018
-                        </p>
-                        <div className="w-15 w-xs-100">
-                          <span className="badge badge-pill badge-secondary">
-                            ON HOLD
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="custom-control custom-checkbox mb-1 align-self-center pr-4">
-                        <Input
-                          type="checkbox"
-                          className="custom-control-input"
-                        />
-                        <span className="custom-control-label">&nbsp;</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="card d-flex flex-row mb-3">
-                    <div className="d-flex flex-grow-1 min-width-zero">
-                      <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                        <NavLink
-                          className="list-item-heading mb-0 truncate w-40 w-xs-100"
-                          to="Pages.Product.Detail.html"
-                        >
-                          Marble Cake
-                        </NavLink>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          Cakes
+                          Bat Gerel
                         </p>
                         <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          02.04.2018
+                          gerel@mail.com
                         </p>
-                        <div className="w-15 w-xs-100">
-                          <span className="badge badge-pill badge-secondary">
-                            ON HOLD
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="custom-control custom-checkbox mb-1 align-self-center pr-4">
-                        <Input
-                          type="checkbox"
-                          className="custom-control-input"
-                        />
-                        <span className="custom-control-label">&nbsp;</span>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          1.000.000₮
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          5.000.000₮
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          15.000.000₮
+                        </p>
+                        <p className="mb-0 text-muted text-small w-10 w-xs-100">
+                          1.5%
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        <div className="d-flex">
+                            <img src={orderimg}alt='product'/>
+                            <img src={orderimg}alt='product'/>
+                            <img src={orderimg}alt='product'/>
+                            </div>
+                        </p>
                       </div>
                     </div>
                   </div>
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                        <NavLink
-                          className="list-item-heading mb-0 truncate w-40 w-xs-100"
-                          to="Pages.Product.Detail.html"
-                        >
-                          Marble Cake
-                        </NavLink>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          Cakes
+                        <p className="mb-0 text-muted text-small w-12 w-xs-100 pl-3 ">
+                          56037
                         </p>
                         <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          02.04.2018
-                        </p>
-                        <div className="w-15 w-xs-100">
-                          <span className="badge badge-pill badge-secondary">
-                            ON HOLD
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="custom-control custom-checkbox mb-1 align-self-center pr-4">
-                        <Input
-                          type="checkbox"
-                          className="custom-control-input"
-                        />
-                        <span className="custom-control-label">&nbsp;</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="card d-flex flex-row mb-3">
-                    <div className="d-flex flex-grow-1 min-width-zero">
-                      <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                        <NavLink
-                          className="list-item-heading mb-0 truncate w-40 w-xs-100"
-                          to="Pages.Product.Detail.html"
-                        >
-                          Marble Cake
-                        </NavLink>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          Cakes
+                          Bat Gerel
                         </p>
                         <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          02.04.2018
-                        </p>
-                        <div className="w-15 w-xs-100">
-                          <span className="badge badge-pill badge-secondary">
-                            ON HOLD
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="custom-control custom-checkbox mb-1 align-self-center pr-4">
-                        <Input
-                          type="checkbox"
-                          className="custom-control-input"
-                        />
-                        <span className="custom-control-label">&nbsp;</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="card d-flex flex-row mb-3">
-                    <div className="d-flex flex-grow-1 min-width-zero">
-                      <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                        <NavLink
-                          className="list-item-heading mb-0 truncate w-40 w-xs-100"
-                          to="Pages.Product.Detail.html"
-                        >
-                          Marble Cake
-                        </NavLink>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          Cakes
+                          gerel@mail.com
                         </p>
                         <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          02.04.2018
+                          1.000.000₮
                         </p>
-                        <div className="w-15 w-xs-100">
-                          <span className="badge badge-pill badge-secondary">
-                            ON HOLD
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="custom-control custom-checkbox mb-1 align-self-center pr-4">
-                        <Input
-                          type="checkbox"
-                          className="custom-control-input"
-                        />
-                        <span className="custom-control-label">&nbsp;</span>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          5.000.000₮
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          15.000.000₮
+                        </p>
+                        <p className="mb-0 text-muted text-small w-10 w-xs-100">
+                          1.5%
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          <div className="d-flex">
+                            <img src={orderimg} alt="product" />
+                            <img src={orderimg} alt="product" />
+                            <img src={orderimg} alt="product" />
+                          </div>
+                        </p>
                       </div>
                     </div>
                   </div>

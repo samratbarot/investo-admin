@@ -79,8 +79,9 @@ li.glide__slide.mx-2 {
   line-height: 76px;
   text-align: center;
   color: #0BB783;
+  
 }
-.li {
+.li,.td {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -105,4 +106,14 @@ a.list-item-heading {
 
 .modal::-webkit-scrollbar {
   width: 0px;
+}
+.form-select{
+  /* position: absolute; */
+width: 322px;
+height: 36px;
+/* left: 1px; */
+top: 200px;
+background-color:#FFFFFF;
+border: 1px solid #D7D7D7;
+box-sizing: border-box;
 }
