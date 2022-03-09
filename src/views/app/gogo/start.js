@@ -7,7 +7,7 @@ import PerfectScrollbar from 'react-perfect-scrollbar';
 import Area from 'components/charts/Area';
 import Card from './dashboard-card/Card';
 import { areaChartData } from '../../../data/charts';
-import Rectangle from '../../../assets/img/topStockLogo/Rectangle.png';
+import Rectangle from '../../../assets/img/Dashboard/Rectangle.png';
 // import Chart from './dashboard-card/Chart';
 
 const Start = ({ match }) => (
