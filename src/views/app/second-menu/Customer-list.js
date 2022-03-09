@@ -281,7 +281,10 @@ const CustromerList = ({ match }) => {
                           U
                         </p>
                         <NavLink
+
                           className="list-item-heading mb-0 truncate w-40"
+
+
                           to='/customer-menu/profile'
                         >
                           56037 <span className='ml-5'>Bat Gerel</span>
