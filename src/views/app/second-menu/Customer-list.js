@@ -277,38 +277,34 @@ const CustromerList = ({ match }) => {
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                      <p className="mb-0 text-small w-15 w-xs-100 u">
+                      <p className="mb-0 text-small w-15 u">
                           U
                         </p>
                         <NavLink
-
-                     
-
-                          className="list-item-heading mb-0 truncate w-40 w-xs-100"
+                          className="list-item-heading mb-0 truncate w-40"
                           to='/customer-menu/profile'
-
                         >
                           56037 <span className='ml-5'>Bat Gerel</span>
                         </NavLink>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        <p className="mb-0 text-muted text-small w-15">
                           gerel@mail.com
                         </p>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        <p className="mb-0 text-muted text-small w-15">
                           05/28/2020
                         </p>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        <p className="mb-0 text-muted text-small w-15">
                           УШ67172808
                         </p>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        <p className="mb-0 text-muted text-small w-15">
                           5011234567
                         </p>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        <p className="mb-0 text-muted text-small w-15">
                           1.000.000₮
                         </p>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        <p className="mb-0 text-muted text-small w-15">
                           91216778
                         </p>
-                        <div className="w-15 w-xs-100">
+                        <div className="w-15">
                           <span className="badge badge-pill badge-secondary not-verified w-80">
                             NOT VERIFIED
                           </span>
