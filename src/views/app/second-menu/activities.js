@@ -6,9 +6,13 @@ import Breadcrumb from 'containers/navs/Breadcrumb';
 import { NavLink } from 'react-router-dom';
 
 const Activities = ({ match }) => {
-  const [show, setShow] = useState({
-    pageDropDown: false,
-  });
+  const [show, setShow] = useState();
+  // const [toggle, setToggle] = useState({
+  //   orderBy: { display: 'none' },
+  //   pages: { display: 'none' },
+  //   checkAll: { display: 'none' },
+
+  // });
   return (
     <>
       <Row>

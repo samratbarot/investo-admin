@@ -4,10 +4,15 @@ import { Input, Row } from 'reactstrap';
 import { Colxx, Separator } from 'components/common/CustomBootstrap';
 import Breadcrumb from 'containers/navs/Breadcrumb';
 import { NavLink } from 'react-router-dom';
+import AddCustomer from './modal-form/add-customer';
 
 const CustromerList = ({ match }) => {
-  const [show, setShow] = useState({
-    pageDropDown: false,
+  const [show, setShow] = useState();
+  const [toggle, setToggle] = useState({
+    orderBy: { display: 'none' },
+    pages: { display: 'none' },
+    checkAll: { display: 'none' },
+
   });
   return (
     <>
@@ -15,25 +20,54 @@ const CustromerList = ({ match }) => {
         <Colxx xxs="12">
           <Breadcrumb heading="Customer list" match={match} />
           <div className="top-right-button-container">
-                            <button type="button" className="btn btn-primary btn-lg top-right-button mr-1">ADD NEW</button>
-                            <div className="btn-group">
-                                <div className="btn btn-primary btn-lg pl-4 pr-0 check-button">
-                                    <div className="custom-control custom-checkbox mb-0 d-inline-block">
-                                        <input type="checkbox" className="custom-control-input" id="checkAll"/>
-                                        <span className="custom-control-label">&nbsp;</span>
-                                    </div>
-                                </div>
-                                <button type="button"
-                                    className="btn btn-lg btn-primary dropdown-toggle dropdown-toggle-split"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span className="sr-only">Toggle Dropdown</span>
-                                </button>
-                                <div className="dropdown-menu dropdown-menu-right">
-                                    <NavLink className="dropdown-item" to="#">Action</NavLink>
-                                    <NavLink className="dropdown-item" to="#">Another action</NavLink>
-                                </div>
-                            </div>
-                        </div>
+            <button
+              type="button"
+              onClick={() => setShow(true)}
+              className="btn btn-primary btn-lg top-right-button mr-1"
+            >
+              ADD NEW
+            </button>
+            <div className="btn-group">
+              <div className="btn btn-primary btn-lg pl-4 pr-0 check-button">
+                <div className="custom-control custom-checkbox mb-0 d-inline-block">
+                  <input
+                    type="checkbox"
+                    className="custom-control-input"
+                    id="checkAll"
+                  />
+                  <span className="custom-control-label">&nbsp;</span>
+                </div>
+              </div>
+              <button
+                type="button"
+                className="btn btn-lg btn-primary dropdown-toggle dropdown-toggle-split"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                onClick={() =>
+                  setToggle((prev) => {
+                    return {
+                      ...prev,
+                      checkAll:
+                        toggle.checkAll.display === 'none'
+                          ? { display: 'block' }
+                          : { display: 'none' },
+                    };
+                  })
+                }
+              >
+                <span className="sr-only">Toggle Dropdown</span>
+              </button>
+              <div className="dropdown-menu dropdown-menu-right" style={toggle.checkAll}>
+                <NavLink className="dropdown-item" to="/abc">
+                  Action
+                </NavLink>
+                <NavLink className="dropdown-item" to="/cds">
+                  Another action
+                </NavLink>
+              </div>
+            </div>
+          </div>
           <Separator className="mb-5" />
         </Colxx>
       </Row>
@@ -44,7 +78,6 @@ const CustromerList = ({ match }) => {
               <div className="row">
                 <div className="col-12">
                   <div className="mb-2">
-                
                     <NavLink
                       className="btn pt-0 pl-0 d-inline-block d-md-none"
                       data-toggle="collapse"
@@ -52,6 +85,8 @@ const CustromerList = ({ match }) => {
                       role="button"
                       aria-expanded="true"
                       aria-controls="displayOptions"
+                      
+
                     >
                       Display Options
                       <i className="simple-icon-arrow-down align-middle" />
@@ -140,14 +175,28 @@ const CustromerList = ({ match }) => {
                             data-toggle="dropdown"
                             aria-haspopup="true"
                             aria-expanded="false"
+                            onClick={() =>
+                              setToggle((prev) => {
+                                return {
+                                  ...prev,
+                                  orderBy:
+                                    toggle.orderBy.display === 'none'
+                                      ? { display: 'block' }
+                                      : { display: 'none' },
+                                };
+                              })
+                            }
                           >
                             Order By
                           </button>
-                          <div className="dropdown-menu">
-                            <NavLink className="dropdown-item" to="#">
+                          <div className="dropdown-menu" style={toggle.orderBy}>
+                            <NavLink className="dropdown-item" to="/action">
                               Action
                             </NavLink>
-                            <NavLink className="dropdown-item" to="#">
+                            <NavLink
+                              className="dropdown-item"
+                              to="/another-action"
+                            >
                               Another action
                             </NavLink>
                           </div>
@@ -168,38 +217,38 @@ const CustromerList = ({ match }) => {
                         <button
                           className="btn btn-outline-dark btn-xs dropdown-toggle"
                           type="button"
-                          onClick={() =>
-                            setShow((...prev) => {
-                              return show.pageDropDown?{ ...prev, pageDropDown:false}:
-                              { ...prev, pageDropDown:true}
-                            })
-                          }
                           data-toggle="dropdown"
                           aria-haspopup="true"
                           aria-expanded="false"
+                          onClick={() =>
+                            setToggle((prev) => {
+                              return {
+                                ...prev,
+                                pages:
+                                  toggle.pages.display === 'none'
+                                    ? { display: 'block' }
+                                    : { display: 'none' },
+                              };
+                            })
+                          }
+
                         >
                           20
                         </button>
-                        <div
-                          className={
-                            !show.pageDropDown
-                              ? 'dropdown-menu dropdown-menu-right'
-                              : 'dropdown-menu-right'
-                          }
-                        >
-                          <NavLink className="dropdown-item" to="#">
+                        <div className="dropdown-menu dropdown-menu-right" style={toggle.pages}>
+                          <NavLink className="dropdown-item" to="/a">
                             10
                           </NavLink>
-                          <NavLink className="dropdown-item active" to="#">
+                          <NavLink className="dropdown-item" to="/b">
                             20
                           </NavLink>
-                          <NavLink className="dropdown-item" to="#">
+                          <NavLink className="dropdown-item" to="/c">
                             30
                           </NavLink>
-                          <NavLink className="dropdown-item" to="#">
+                          <NavLink className="dropdown-item" to="/d">
                             50
                           </NavLink>
-                          <NavLink className="dropdown-item" to="#">
+                          <NavLink className="dropdown-item" to="/e">
                             100
                           </NavLink>
                         </div>
@@ -211,29 +260,53 @@ const CustromerList = ({ match }) => {
 
               <div className="row">
                 <div className="">
-                 <ul>
-                   <li>Image</li>
-                </ul>  
+                  <ul>
+                    <li>Image</li>
+                    <li>Prefix</li>
+                    <li>First name / Last name</li>
+                    <li>Email</li>
+                    <li>Registered date</li>
+                    <li>National ID</li>
+                    <li>Bank account</li>
+                    <li>User balance</li>
+                    <li>Phone</li>
+                    <li>Status</li>
+                  </ul>
                 </div>
                 <div className="col-12 list" data-check-all="checkAll">
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          image
+                        </p>
                         <NavLink
                           className="list-item-heading mb-0 truncate w-40 w-xs-100"
                           to="Pages.Product.Detail.html"
                         >
-                          Marble Cake
+                          56037
                         </NavLink>
                         <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          Cakes
+                          gerel@mail.com
                         </p>
                         <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          02.04.2018
+                          05/28/2020
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          УШ67172808
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          5011234567
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          1.000.000₮
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          91216778
                         </p>
                         <div className="w-15 w-xs-100">
-                          <span className="badge badge-pill badge-secondary">
-                            ON HOLD
+                          <span className="badge badge-pill badge-secondary not-verified">
+                            NOT VERIFIED
                           </span>
                         </div>
                       </div>
@@ -250,21 +323,36 @@ const CustromerList = ({ match }) => {
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          image
+                        </p>
                         <NavLink
                           className="list-item-heading mb-0 truncate w-40 w-xs-100"
                           to="Pages.Product.Detail.html"
                         >
-                          Marble Cake
+                          56037
                         </NavLink>
                         <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          Cakes
+                          gerel@mail.com
                         </p>
                         <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          02.04.2018
+                          05/28/2020
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          УШ67172808
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          5011234567
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          1.000.000₮
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          91216778
                         </p>
                         <div className="w-15 w-xs-100">
-                          <span className="badge badge-pill badge-secondary">
-                            ON HOLD
+                          <span className="badge badge-pill badge-secondary verified">
+                            VERIFIED
                           </span>
                         </div>
                       </div>
@@ -281,21 +369,36 @@ const CustromerList = ({ match }) => {
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          image
+                        </p>
                         <NavLink
                           className="list-item-heading mb-0 truncate w-40 w-xs-100"
                           to="Pages.Product.Detail.html"
                         >
-                          Marble Cake
+                          56037
                         </NavLink>
                         <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          Cakes
+                          gerel@mail.com
                         </p>
                         <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          02.04.2018
+                          05/28/2020
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          УШ67172808
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          5011234567
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          1.000.000₮
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          91216778
                         </p>
                         <div className="w-15 w-xs-100">
-                          <span className="badge badge-pill badge-secondary">
-                            ON HOLD
+                          <span className="badge badge-pill badge-secondary deactivate">
+                            DEACTIVATED
                           </span>
                         </div>
                       </div>
@@ -312,21 +415,36 @@ const CustromerList = ({ match }) => {
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          image
+                        </p>
                         <NavLink
                           className="list-item-heading mb-0 truncate w-40 w-xs-100"
                           to="Pages.Product.Detail.html"
                         >
-                          Marble Cake
+                          56037
                         </NavLink>
                         <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          Cakes
+                          gerel@mail.com
                         </p>
                         <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          02.04.2018
+                          05/28/2020
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          УШ67172808
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          5011234567
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          1.000.000₮
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          91216778
                         </p>
                         <div className="w-15 w-xs-100">
-                          <span className="badge badge-pill badge-secondary">
-                            ON HOLD
+                          <span className="badge badge-pill badge-secondary delete">
+                            DELETED
                           </span>
                         </div>
                       </div>
@@ -343,21 +461,36 @@ const CustromerList = ({ match }) => {
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          image
+                        </p>
                         <NavLink
                           className="list-item-heading mb-0 truncate w-40 w-xs-100"
                           to="Pages.Product.Detail.html"
                         >
-                          Marble Cake
+                          56037
                         </NavLink>
                         <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          Cakes
+                          gerel@mail.com
                         </p>
                         <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          02.04.2018
+                          05/28/2020
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          УШ67172808
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          5011234567
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          1.000.000₮
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          91216778
                         </p>
                         <div className="w-15 w-xs-100">
-                          <span className="badge badge-pill badge-secondary">
-                            ON HOLD
+                          <span className="badge badge-pill badge-secondary registred">
+                            REGISTERED
                           </span>
                         </div>
                       </div>
@@ -421,6 +554,7 @@ const CustromerList = ({ match }) => {
           </section>
         </Colxx>
       </Row>
+      <AddCustomer show={show} setShow={setShow} />
     </>
   );
 };
