@@ -282,7 +282,7 @@ const CustromerList = ({ match }) => {
                         </p>
                         <NavLink
                           className="list-item-heading mb-0 truncate w-40 w-xs-100"
-                          to="Pages.Product.Detail.html"
+                          to='/customer-menu/profile'
                         >
                           56037
                         </NavLink>
