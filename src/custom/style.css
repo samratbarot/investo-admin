@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  font-family: 'IBM Plex Sans', sans-serif !important;
+}
 .glide__slides{
   width: 100%;
  
@@ -6,4 +15,50 @@
  list-style: none;
  display: inline-block;
 
+}
+ul {
+  list-style-type:none;
+}
+.one {
+  padding: 6px 11px;
+
+  background: #6FB327;
+  border-radius: 50px;
+
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 17px;
+  /* identical to box height */
+
+
+  color: #FFFFFF;
+}
+.p1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+
+
+  color: #000000;
+}
+.p2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  /* identical to box height */
+
+
+  color: #909090;
+}
+li.glide__slide.mx-2 {
+  height: 228px;
+  width: 128px;
+}
+.icon-cards-row {
+  margin-left: -40px !important;
 }
