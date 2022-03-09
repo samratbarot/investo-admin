@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 
-const Diposite = React.lazy(() => import('./diposite'));
+const Diposit = React.lazy(() => import('./diposit'));
 const Withdraw = React.lazy(() => import('./withdraw'));
 
 const RequestPage = ({ match }) => (
@@ -12,7 +12,7 @@ const RequestPage = ({ match }) => (
       <Route
         path={`${match.url}/request`}
         exact
-        render={(props) => <Diposite {...props} />}
+        render={(props) => <Diposit {...props} />}
       />
       <Route
         path={`${match.url}/request/withdraw`}
