@@ -76,7 +76,7 @@ li.glide__slide.mx-2 {
   font-style: normal;
   font-weight: 300;
   font-size: 48px;
-  line-height: 87px;
+  line-height: 76px;
   text-align: center;
   color: #0BB783;
 }
@@ -94,4 +94,15 @@ a.list-item-heading {
   font-size: 16px;
   line-height: 20px;
   color: #212121;
+  padding: 0 5px;
+}
+.min-width-zero {
+  height: 76px;
+}
+.modal {
+  overflow: scroll !important;
+}
+
+.modal::-webkit-scrollbar {
+  width: 0px;
 }

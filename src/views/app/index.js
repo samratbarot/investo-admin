@@ -24,6 +24,7 @@ const IpoPage = React.lazy(() =>
   import(/* webpackChunkName: "viwes-order-page" */ './ipo')
 );
 
+
 const App = ({ match }) => {
   return (
     <AppLayout>
