@@ -1,6 +1,5 @@
 import React, { Suspense } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
-import '../../../custom/style.css'
 
 const Start = React.lazy(() =>
   import(/* webpackChunkName: "start" */ './start')

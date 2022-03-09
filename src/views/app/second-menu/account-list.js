@@ -6,8 +6,11 @@ import Breadcrumb from 'containers/navs/Breadcrumb';
 import { NavLink } from 'react-router-dom';
 
 const AccountList = ({ match }) => {
-  const [show, setShow] = useState({
-    pageDropDown: false,
+  const [show, setShow] = useState();
+  const [toggle, setToggle] = useState({
+    orderBy: { display: 'none' },
+    pages: { display: 'none' },
+    checkAll: { display: 'none' },
   });
   return (
     <>
@@ -15,25 +18,53 @@ const AccountList = ({ match }) => {
         <Colxx xxs="12">
           <Breadcrumb heading="Account list" match={match} />
           <div className="top-right-button-container">
-                            <button type="button" className="btn btn-primary btn-lg top-right-button mr-1">ADD NEW</button>
-                            <div className="btn-group">
-                                <div className="btn btn-primary btn-lg pl-4 pr-0 check-button">
-                                    <div className="custom-control custom-checkbox mb-0 d-inline-block">
-                                        <input type="checkbox" className="custom-control-input" id="checkAll"/>
-                                        <span className="custom-control-label">&nbsp;</span>
-                                    </div>
-                                </div>
-                                <button type="button"
-                                    className="btn btn-lg btn-primary dropdown-toggle dropdown-toggle-split"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span className="sr-only">Toggle Dropdown</span>
-                                </button>
-                                <div className="dropdown-menu dropdown-menu-right">
-                                    <NavLink className="dropdown-item" to="#">Action</NavLink>
-                                    <NavLink className="dropdown-item" to="#">Another action</NavLink>
-                                </div>
-                            </div>
-                        </div>
+            <button
+              type="button"
+              className="btn btn-primary btn-lg top-right-button mr-1"
+            >
+              ADD NEW
+            </button>
+            <div className="btn-group">
+              <div className="btn btn-primary btn-lg pl-4 pr-0 check-button">
+                <div className="custom-control custom-checkbox mb-0 d-inline-block">
+                  <input
+                    type="checkbox"
+                    className="custom-control-input"
+                    id="checkAll"
+                  />
+                  <span className="custom-control-label">&nbsp;</span>
+                </div>
+              </div>
+              <button
+                type="button"
+                className="btn btn-lg btn-primary dropdown-toggle dropdown-toggle-split"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                onClick={() =>
+                  setToggle((prev) => {
+                    return {
+                      ...prev,
+                      checkAll:
+                        toggle.checkAll.display === 'none'
+                          ? { display: 'block' }
+                          : { display: 'none' },
+                    };
+                  })
+                }
+              >
+                <span className="sr-only">Toggle Dropdown</span>
+              </button>
+              <div className="dropdown-menu dropdown-menu-right">
+                <NavLink className="dropdown-item" to="#">
+                  Action
+                </NavLink>
+                <NavLink className="dropdown-item" to="#">
+                  Another action
+                </NavLink>
+              </div>
+            </div>
+          </div>
           <Separator className="mb-5" />
         </Colxx>
       </Row>
@@ -44,7 +75,6 @@ const AccountList = ({ match }) => {
               <div className="row">
                 <div className="col-12">
                   <div className="mb-2">
-                
                     <NavLink
                       className="btn pt-0 pl-0 d-inline-block d-md-none"
                       data-toggle="collapse"
@@ -170,8 +200,9 @@ const AccountList = ({ match }) => {
                           type="button"
                           onClick={() =>
                             setShow((...prev) => {
-                              return show.pageDropDown?{ ...prev, pageDropDown:false}:
-                              { ...prev, pageDropDown:true}
+                              return show.pageDropDown
+                                ? { ...prev, pageDropDown: false }
+                                : { ...prev, pageDropDown: true };
                             })
                           }
                           data-toggle="dropdown"
@@ -211,9 +242,9 @@ const AccountList = ({ match }) => {
 
               <div className="row">
                 <div className="">
-                 <ul>
-                   <li>Image</li>
-                </ul>  
+                  <ul>
+                    <li>Image</li>
+                  </ul>
                 </div>
                 <div className="col-12 list" data-check-all="checkAll">
                   <div className="card d-flex flex-row mb-3">
