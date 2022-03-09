@@ -106,3 +106,56 @@ a.list-item-heading {
 .modal::-webkit-scrollbar {
   width: 0px;
 }
+/* profile page */
+.main-box {
+  padding: 15px;
+  background: #FFFFFF;
+  border: 1px solid #D7D7D7;
+  box-sizing: border-box;
+}
+.p-p1 {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  /* or 143% */
+
+  color: #3A3A3A;
+}
+.p-p2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  /* or 143% */
+
+  color: #3A3A3A;
+}
+.box {
+  padding: 15px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+.text-p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 14px;
+  /* or 108% */
+
+  color: #8F8F8F;
+}
+.text-green {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 14px;
+  /* or 70% */
+
+  color: #6FB327;
+}
+@media (max-width:481px) {
+  .box {
+    margin-top: 1rem;
+  }
+}

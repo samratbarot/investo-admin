@@ -4,6 +4,8 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 const CustomerList = React.lazy(() =>import('./Customer-list'));
 const AccountList = React.lazy(() => import('./account-list'));
 const Activities = React.lazy(() =>import('./activities'));
+
+
 const SecondMenu = ({ match }) => (
   <Suspense fallback={<div className="loading" />}>
     <Switch>
