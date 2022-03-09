@@ -23,6 +23,9 @@ const ReportPage = React.lazy(() =>
 const IpoPage = React.lazy(() =>
   import(/* webpackChunkName: "viwes-order-page" */ './ipo')
 );
+const CustomerDetailsPage=React.lazy(() =>
+       import(/* webpackChunkName: "viwes-order-page" */ './customer-details')
+)
 
 const App = ({ match }) => {
   return (
@@ -39,12 +42,12 @@ const App = ({ match }) => {
               path={`${match.url}/second-menu`}
               render={(props) => <SecondMenu {...props} />}
             />
-
-            {/* <ProtectedRoute
-                    path={`${match.url}/second-menu`}
-                    component={SecondMenu}
-                    roles={[UserRole.Admin]}
-            /> */}
+            <Route
+              path={`${match.url}/customer-menu`}
+              render={(props) => <CustomerDetailsPage {...props} />}
+            />
+        
+        
             <Route
               path={`${match.url}/order`}
               render={(props) => <OrderPage {...props} />}
