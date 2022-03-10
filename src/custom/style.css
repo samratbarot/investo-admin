@@ -68,9 +68,9 @@ li.glide__slide.mx-2 {
 .icon-cards-row {
   margin-left: -40px !important;
 }
-.card .card-body {
+/* .card .card-body {
   padding: 0rem !important;
-}
+} */
 .u {
   background-color: #d7f9ef;
   font-style: normal;
@@ -154,8 +154,36 @@ a.list-item-heading {
 
   color: #6FB327;
 }
+.dashboard-list-with-user {
+  height: 100% !important;
+}
+.text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+
+  color: #8F8F8F;
+}
+.text-green {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+
+  color: #6FB327;
+}
 @media (max-width:481px) {
   .box {
     margin-top: 1rem;
+  }
+  .min-width-zero {
+    height: auto;
+  }
+  li.glide__slide.mx-2 {
+    height: 215px;
+    width: 100%;
   }
 }
