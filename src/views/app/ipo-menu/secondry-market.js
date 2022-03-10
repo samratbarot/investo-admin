@@ -4,6 +4,7 @@ import { Input, Row } from 'reactstrap';
 import { Colxx, Separator } from 'components/common/CustomBootstrap';
 import Breadcrumb from 'containers/navs/Breadcrumb';
 import { NavLink } from 'react-router-dom';
+import {adminRoot} from '../../../constants/defaultValues'
 // import AddOrder from './modal-form/add-order';
 
 const SecondaryMarketList = ({ match }) => {
@@ -19,6 +20,7 @@ const SecondaryMarketList = ({ match }) => {
         <Colxx xxs="12">
           <Breadcrumb heading="Secondary Market" match={match} />
           <div className="top-right-button-container">
+           
             <button
               type="button"
             //   onClick={() => setShow(true)}
@@ -280,7 +282,7 @@ const SecondaryMarketList = ({ match }) => {
                         </p>
                         <NavLink
                           className="list-item-heading mb-0 truncate w-20"
-                          to='/customer-menu/profile'
+                          to={`${adminRoot}/ipo/edit-secondary-market`}
                         >
                   
                         <span className='ml-2'>ADL</span>
