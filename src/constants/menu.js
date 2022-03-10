@@ -95,7 +95,7 @@ const data = [
       {
         icon: 'iconsminds-notebook',
         label: 'menu.article',
-        to: `${adminRoot}/request-menu/request/withdraw`,
+        to: `${adminRoot}/ipo/articles`,
       },
      
     ],

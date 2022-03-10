@@ -39,11 +39,11 @@ const CustomerProfile = ({ match }) => {
         <Colxx xxs="12" className="mb-4">
           <section>
             <div className="container-fluid disable-text-selection">
-              <div className='col-lg-4'>
+              <div className='col-lg-4 pl-0'>
                   <div className='d-flex justify-content-between'>
-                      <NavLink to="#" onClick={()=>setTabIndex(0)}><p className={tabIndex===0?'text-green':"mb-0"}>PROFILE</p></NavLink>
-                      <NavLink to="#" onClick={()=>setTabIndex(1)}><p className={tabIndex===1?'text-green':"mb-0"}>OWNED IPO</p></NavLink>
-                      <NavLink to="#" onClick={()=>setTabIndex(2)}><p className={tabIndex===2?'text-green':"mb-0"}>TRANSACTION</p></NavLink>
+                      <NavLink to="#" onClick={()=>setTabIndex(0)}><p className={tabIndex===0?'text-green_ mb-0':"mb-0"}>PROFILE</p></NavLink>
+                      <NavLink to="#" onClick={()=>setTabIndex(1)}><p className={tabIndex===1?'text-green_ mb-0':"mb-0"}>OWNED IPO</p></NavLink>
+                      <NavLink to="#" onClick={()=>setTabIndex(2)}><p className={tabIndex===2?'text-green_ mb-0':"mb-0"}>TRANSACTION</p></NavLink>
                   </div>
                 
                 </div>

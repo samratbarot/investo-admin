@@ -3,7 +3,7 @@ import { Input, Row } from 'reactstrap';
 // import IntlMessages from 'helpers/IntlMessages';
 import { Colxx, Separator } from 'components/common/CustomBootstrap';
 import Breadcrumb from 'containers/navs/Breadcrumb';
-import { NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { adminRoot } from 'constants/defaultValues';
 
 const AccountList = ({ match }) => {
@@ -19,20 +19,22 @@ const AccountList = ({ match }) => {
           <Breadcrumb heading="IPO list" match={match} />
           <div className="top-right-button-container">
             <NavLink to={`${adminRoot}/ipo/add-article`}>
-            <button
-              type="button"
-              className="btn btn-primary btn-lg top-right-button mr-1"
-            >
-              ADD ARTICLE
-            </button>
+              <button
+                type="button"
+                className="btn btn-primary btn-lg top-right-button mr-1"
+              >
+                ADD ARTICLE
+              </button>
             </NavLink>
-            <button
-              type="button"
-              // onClick={() => setShow(true)}
-              className="btn btn-primary btn-lg top-right-button mr-1"
-            >
-              ADD IPO
-            </button>
+            <NavLink  to={`${adminRoot}/ipo/add-ipo`}>
+              <button
+               
+                type="button"            
+                className="btn btn-primary btn-lg top-right-button mr-1"
+              >
+                ADD IPO
+              </button>
+            </NavLink>
             <div className="btn-group">
               <div className="btn btn-primary btn-lg pl-4 pr-0 check-button">
                 <div className="custom-control custom-checkbox mb-0 d-inline-block">
@@ -286,7 +288,7 @@ const AccountList = ({ match }) => {
                         <p className="mb-0 text-small w-15 u">U</p>
                         <NavLink
                           className="list-item-heading mb-0 truncate w-20"
-                          to="/customer-menu/profile"
+                          to={`${adminRoot}/ipo/edit-ipo`}
                         >
                           <span className="ml-2">ADL</span>
                         </NavLink>
