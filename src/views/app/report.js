@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Input, Row } from 'reactstrap';
+import { Row } from 'reactstrap';
 // import IntlMessages from 'helpers/IntlMessages';
 import { Colxx, Separator } from 'components/common/CustomBootstrap';
 import Breadcrumb from 'containers/navs/Breadcrumb';
 import { NavLink } from 'react-router-dom';
 
-const AccountList = ({ match }) => {
+const ReportList = ({ match }) => {
   const [toggle, setToggle] = useState({
    
     pages: { display: 'none' },
@@ -100,168 +100,153 @@ const AccountList = ({ match }) => {
               </div>
 
               <div className="row">
-                <div className="">
-                  <ul>
-                    <li>Image</li>
+              <div className="w-90 py-3">
+                  <ul className="d-flex justify-content-between">
+                    <li className="li">Date</li>
+                    <li className="li">Deposit</li>
+                    <li className="li">Deposit amount</li>
+                    <li className="li">Withdraw amount</li>
+                    <li className="li">income</li>
+                    <li className="li">Clean income</li>
+                 
                   </ul>
                 </div>
                 <div className="col-12 list" data-check-all="checkAll">
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                        <NavLink
-                          className="list-item-heading mb-0 truncate w-40 w-xs-100"
-                          to="Pages.Product.Detail.html"
-                        >
-                          Marble Cake
-                        </NavLink>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          Cakes
+                      <p className="mb-0 text-muted text-small w-xs-100 ml-2 w-15">
+                      2022/03/06
                         </p>
                         <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          02.04.2018
+                          102
                         </p>
-                        <div className="w-15 w-xs-100">
-                          <span className="badge badge-pill badge-secondary">
-                            ON HOLD
-                          </span>
-                        </div>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        102.001.800₮
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        65
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        1.274.000₮
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        356.000₮
+                        </p>
+                       
                       </div>
 
-                      <div className="custom-control custom-checkbox mb-1 align-self-center pr-4">
-                        <Input
-                          type="checkbox"
-                          className="custom-control-input"
-                        />
-                        <span className="custom-control-label">&nbsp;</span>
-                      </div>
+                     
                     </div>
                   </div>
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                        <NavLink
-                          className="list-item-heading mb-0 truncate w-40 w-xs-100"
-                          to="Pages.Product.Detail.html"
-                        >
-                          Marble Cake
-                        </NavLink>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          Cakes
+                      <p className="mb-0 text-muted text-small w-xs-100 ml-2 w-15">
+                      2022/03/06
                         </p>
                         <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          02.04.2018
+                          102
                         </p>
-                        <div className="w-15 w-xs-100">
-                          <span className="badge badge-pill badge-secondary">
-                            ON HOLD
-                          </span>
-                        </div>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        102.001.800₮
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        65
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        1.274.000₮
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        356.000₮
+                        </p>
+                       
                       </div>
 
-                      <div className="custom-control custom-checkbox mb-1 align-self-center pr-4">
-                        <Input
-                          type="checkbox"
-                          className="custom-control-input"
-                        />
-                        <span className="custom-control-label">&nbsp;</span>
-                      </div>
+                     
                     </div>
                   </div>
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                        <NavLink
-                          className="list-item-heading mb-0 truncate w-40 w-xs-100"
-                          to="Pages.Product.Detail.html"
-                        >
-                          Marble Cake
-                        </NavLink>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          Cakes
+                      <p className="mb-0 text-muted text-small w-xs-100 ml-2 w-15">
+                      2022/03/06
                         </p>
                         <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          02.04.2018
+                          102
                         </p>
-                        <div className="w-15 w-xs-100">
-                          <span className="badge badge-pill badge-secondary">
-                            ON HOLD
-                          </span>
-                        </div>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        102.001.800₮
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        65
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        1.274.000₮
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        356.000₮
+                        </p>
+                       
                       </div>
 
-                      <div className="custom-control custom-checkbox mb-1 align-self-center pr-4">
-                        <Input
-                          type="checkbox"
-                          className="custom-control-input"
-                        />
-                        <span className="custom-control-label">&nbsp;</span>
-                      </div>
+                     
                     </div>
                   </div>
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                        <NavLink
-                          className="list-item-heading mb-0 truncate w-40 w-xs-100"
-                          to="Pages.Product.Detail.html"
-                        >
-                          Marble Cake
-                        </NavLink>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          Cakes
+                      <p className="mb-0 text-muted text-small w-xs-100 ml-2 w-15">
+                      2022/03/06
                         </p>
                         <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          02.04.2018
+                          102
                         </p>
-                        <div className="w-15 w-xs-100">
-                          <span className="badge badge-pill badge-secondary">
-                            ON HOLD
-                          </span>
-                        </div>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        102.001.800₮
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        65
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        1.274.000₮
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        356.000₮
+                        </p>
+                       
                       </div>
 
-                      <div className="custom-control custom-checkbox mb-1 align-self-center pr-4">
-                        <Input
-                          type="checkbox"
-                          className="custom-control-input"
-                        />
-                        <span className="custom-control-label">&nbsp;</span>
-                      </div>
+                     
                     </div>
                   </div>
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                        <NavLink
-                          className="list-item-heading mb-0 truncate w-40 w-xs-100"
-                          to="Pages.Product.Detail.html"
-                        >
-                          Marble Cake
-                        </NavLink>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          Cakes
+                      <p className="mb-0 text-muted text-small w-xs-100 ml-2 w-15">
+                      2022/03/06
                         </p>
                         <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          02.04.2018
+                          102
                         </p>
-                        <div className="w-15 w-xs-100">
-                          <span className="badge badge-pill badge-secondary">
-                            ON HOLD
-                          </span>
-                        </div>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        102.001.800₮
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        65
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        1.274.000₮
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                        356.000₮
+                        </p>
+                       
                       </div>
 
-                      <div className="custom-control custom-checkbox mb-1 align-self-center pr-4">
-                        <Input
-                          type="checkbox"
-                          className="custom-control-input"
-                        />
-                        <span className="custom-control-label">&nbsp;</span>
-                      </div>
+                     
                     </div>
                   </div>
-
                   <nav className="mt-4 mb-3">
                     <ul className="pagination justify-content-center mb-0">
                       <li className="page-item ">
@@ -314,4 +299,4 @@ const AccountList = ({ match }) => {
     </>
   );
 };
-export default AccountList;
+export default ReportList;

@@ -21,7 +21,7 @@ const ReportPage = React.lazy(() =>
   import(/* webpackChunkName: "viwes-order-page" */ './report')
 );
 const IpoPage = React.lazy(() =>
-  import(/* webpackChunkName: "viwes-order-page" */ './ipo')
+  import(/* webpackChunkName: "viwes-order-page" */ './ipo-menu')
 );
 const CustomerDetailsPage=React.lazy(() =>
        import(/* webpackChunkName: "viwes-order-page" */ './customer-details')

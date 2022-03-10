@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
 import { Input, Row } from 'reactstrap';
 // import IntlMessages from 'helpers/IntlMessages';
-import { Colxx, Separator } from 'components/common/CustomBootstrap';
-import Breadcrumb from 'containers/navs/Breadcrumb';
+import { Colxx } from 'components/common/CustomBootstrap';
 import { NavLink } from 'react-router-dom';
-import AddWithdraw from './modal-form/add-withdraw';
 
-const AccountList = ({ match }) => {
-  const [show, setShow] = useState();
+const CustomerTransation = () => {
   const [toggle, setToggle] = useState({
     orderBy: { display: 'none' },
     pages: { display: 'none' },
@@ -15,64 +12,6 @@ const AccountList = ({ match }) => {
   });
   return (
     <>
-      <Row>
-        <Colxx xxs="12">
-          <Breadcrumb heading="Withdraw" match={match} />
-          <div className="top-right-button-container">
-            <button
-              type="button"
-              onClick={() => setShow(true)}
-              className="btn btn-primary btn-lg top-right-button mr-1"
-            >
-              WITHDRAW
-            </button>
-            <div className="btn-group">
-              <div className="btn btn-primary btn-lg pl-4 pr-0 check-button">
-                <div className="custom-control custom-checkbox mb-0 d-inline-block">
-                  <input
-                    type="checkbox"
-                    className="custom-control-input"
-                    id="checkAll"
-                  />
-                  <span className="custom-control-label">&nbsp;</span>
-                </div>
-              </div>
-              <button
-                type="button"
-                className="btn btn-lg btn-primary dropdown-toggle dropdown-toggle-split"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                onClick={() =>
-                  setToggle((prev) => {
-                    return {
-                      ...prev,
-                      checkAll:
-                        toggle.checkAll.display === 'none'
-                          ? { display: 'block' }
-                          : { display: 'none' },
-                    };
-                  })
-                }
-              >
-                <span className="sr-only">Toggle Dropdown</span>
-              </button>
-              <div
-                className="dropdown-menu dropdown-menu-right"
-                style={toggle.checkAll}
-              >
-                <NavLink className="dropdown-item" to="/abc">
-                  Action
-                </NavLink>
-                <NavLink className="dropdown-item" to="/cds">
-                  Another action
-                </NavLink>
-              </div>
-            </div>
-          </div>
-          <Separator className="mb-5" />
-        </Colxx>
-      </Row>
       <Row>
         <Colxx xxs="12" className="mb-4">
           <section>
@@ -169,7 +108,7 @@ const AccountList = ({ match }) => {
                       </span>
                       <div className="d-block d-md-inline-block">
                         <div className="btn-group float-md-left mr-1 mb-1">
-                          <button
+                        <button
                             className="btn btn-outline-dark btn-xs dropdown-toggle"
                             type="button"
                             data-toggle="dropdown"
@@ -231,13 +170,11 @@ const AccountList = ({ match }) => {
                               };
                             })
                           }
+
                         >
                           20
                         </button>
-                        <div
-                          className="dropdown-menu dropdown-menu-right"
-                          style={toggle.pages}
-                        >
+                        <div className="dropdown-menu dropdown-menu-right" style={toggle.pages}>
                           <NavLink className="dropdown-item" to="/a">
                             10
                           </NavLink>
@@ -261,55 +198,30 @@ const AccountList = ({ match }) => {
               </div>
 
               <div className="row">
-                <div className="w-90 py-3">
-                  <ul className="d-flex justify-content-between">
-                    <li className="li">Image</li>
-                    <li className="li">ID</li>
-                    <li className="li">Date</li>
-                    <li className="li">Customer name</li>
-                    <li className="li">User email</li>
-                    <li className="li">Phone</li>
-                    <li className="li">Bank account type</li>
-                    <li className="li">Bank account</li>
-                    <li className="li">Amount</li>
-                    <li className="li">Status</li>
+                <div className="">
+                  <ul>
+                    <li>Image</li>
                   </ul>
                 </div>
                 <div className="col-12 list" data-check-all="checkAll">
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                        <p className="mb-0 text-small w-15 u">U</p>
                         <NavLink
-                          className="list-item-heading mb-0 truncate w-10"
-                          to="/customer-menu/profile"
+                          className="list-item-heading mb-0 truncate w-40 w-xs-100"
+                          to="Pages.Product.Detail.html"
                         >
-                          583
+                          Marble Cake
                         </NavLink>
-                        <p className="mb-0 text-muted text-small w-15">
-                          2020/05/20 20:00
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          Cakes
                         </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          Bat Gerel
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          02.04.2018
                         </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          gerel@mail.com
-                        </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          99887766
-                        </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          Khan bank
-                        </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          5050505050
-                        </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          150.000₮
-                        </p>
-                        <div className="w-15">
-                          <span className="badge badge-pill badge-secondary not-verified w-80">
-                            PROCESSING
+                        <div className="w-15 w-xs-100">
+                          <span className="badge badge-pill badge-secondary">
+                            ON HOLD
                           </span>
                         </div>
                       </div>
@@ -326,37 +238,21 @@ const AccountList = ({ match }) => {
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                        <p className="mb-0 text-small w-15 u">U</p>
                         <NavLink
-                          className="list-item-heading mb-0 truncate w-10"
-                          to="/customer-menu/profile"
+                          className="list-item-heading mb-0 truncate w-40 w-xs-100"
+                          to="Pages.Product.Detail.html"
                         >
-                          583
+                          Marble Cake
                         </NavLink>
-                        <p className="mb-0 text-muted text-small w-15">
-                          2020/05/20 20:00
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          Cakes
                         </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          Bat Gerel
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          02.04.2018
                         </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          gerel@mail.com
-                        </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          99887766
-                        </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          Khan bank
-                        </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          5050505050
-                        </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          150.000₮
-                        </p>
-                        <div className="w-15">
-                          <span className="badge badge-pill badge-secondary delete w-80">
-                            REJECTED
+                        <div className="w-15 w-xs-100">
+                          <span className="badge badge-pill badge-secondary">
+                            ON HOLD
                           </span>
                         </div>
                       </div>
@@ -373,37 +269,21 @@ const AccountList = ({ match }) => {
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                        <p className="mb-0 text-small w-15 u">U</p>
                         <NavLink
-                          className="list-item-heading mb-0 truncate w-10"
-                          to="/customer-menu/profile"
+                          className="list-item-heading mb-0 truncate w-40 w-xs-100"
+                          to="Pages.Product.Detail.html"
                         >
-                          583
+                          Marble Cake
                         </NavLink>
-                        <p className="mb-0 text-muted text-small w-15">
-                          2020/05/20 20:00
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          Cakes
                         </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          Bat Gerel
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          02.04.2018
                         </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          gerel@mail.com
-                        </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          99887766
-                        </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          Khan bank
-                        </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          5050505050
-                        </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          150.000₮
-                        </p>
-                        <div className="w-15">
-                          <span className="badge badge-pill badge-secondary deactivate w-80">
-                            SUPERADMIN
+                        <div className="w-15 w-xs-100">
+                          <span className="badge badge-pill badge-secondary">
+                            ON HOLD
                           </span>
                         </div>
                       </div>
@@ -420,37 +300,21 @@ const AccountList = ({ match }) => {
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                        <p className="mb-0 text-small w-15 u">U</p>
                         <NavLink
-                          className="list-item-heading mb-0 truncate w-10"
-                          to="/customer-menu/profile"
+                          className="list-item-heading mb-0 truncate w-40 w-xs-100"
+                          to="Pages.Product.Detail.html"
                         >
-                          583
+                          Marble Cake
                         </NavLink>
-                        <p className="mb-0 text-muted text-small w-15">
-                          2020/05/20 20:00
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          Cakes
                         </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          Bat Gerel
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          02.04.2018
                         </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          gerel@mail.com
-                        </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          99887766
-                        </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          Khan bank
-                        </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          5050505050
-                        </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          150.000₮
-                        </p>
-                        <div className="w-15">
-                          <span className="badge badge-pill badge-secondary deactivate w-80">
-                            ADMIN
+                        <div className="w-15 w-xs-100">
+                          <span className="badge badge-pill badge-secondary">
+                            ON HOLD
                           </span>
                         </div>
                       </div>
@@ -467,37 +331,21 @@ const AccountList = ({ match }) => {
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                        <p className="mb-0 text-small w-15 u">U</p>
                         <NavLink
-                          className="list-item-heading mb-0 truncate w-10"
-                          to="/customer-menu/profile"
+                          className="list-item-heading mb-0 truncate w-40 w-xs-100"
+                          to="Pages.Product.Detail.html"
                         >
-                          583
+                          Marble Cake
                         </NavLink>
-                        <p className="mb-0 text-muted text-small w-15">
-                          2020/05/20 20:00
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          Cakes
                         </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          Bat Gerel
+                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
+                          02.04.2018
                         </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          gerel@mail.com
-                        </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          99887766
-                        </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          Khan bank
-                        </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          5050505050
-                        </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          150.000₮
-                        </p>
-                        <div className="w-15">
-                          <span className="badge badge-pill badge-secondary verified w-80">
-                            CONFIRMED
+                        <div className="w-15 w-xs-100">
+                          <span className="badge badge-pill badge-secondary">
+                            ON HOLD
                           </span>
                         </div>
                       </div>
@@ -511,6 +359,7 @@ const AccountList = ({ match }) => {
                       </div>
                     </div>
                   </div>
+
                   <nav className="mt-4 mb-3">
                     <ul className="pagination justify-content-center mb-0">
                       <li className="page-item ">
@@ -560,8 +409,7 @@ const AccountList = ({ match }) => {
           </section>
         </Colxx>
       </Row>
-      <AddWithdraw show={show} setShow={setShow} />
     </>
   );
 };
-export default AccountList;
+export default CustomerTransation;

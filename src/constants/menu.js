@@ -81,6 +81,24 @@ const data = [
     icon: 'iconsminds-idea',
     label: 'menu.ipo',
     to: `${adminRoot}/ipo`,
+    subs: [
+      {
+        icon: 'iconsminds-rocket',
+        label: 'menu.ipolist',
+        to: `${adminRoot}/ipo`,
+      },
+      {
+        icon: 'iconsminds-energy',
+        label: 'menu.secondary_market_list',
+        to: `${adminRoot}/ipo/secondary-market`,
+      },
+      {
+        icon: 'iconsminds-notebook',
+        label: 'menu.article',
+        to: `${adminRoot}/request-menu/request/withdraw`,
+      },
+     
+    ],
   },
   {
     id: 'setting',
