@@ -7,7 +7,7 @@ import Breadcrumb from 'containers/navs/Breadcrumb';
 
 
 const CustomerProfile = ({ match }) => {
-
+  console.log(match)
   //   const [toggle, setToggle] = useState({
   //     orderBy: { display: 'none' },
   //     pages: { display: 'none' },

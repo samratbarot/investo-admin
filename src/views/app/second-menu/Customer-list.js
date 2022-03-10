@@ -5,8 +5,10 @@ import { Colxx, Separator } from 'components/common/CustomBootstrap';
 import Breadcrumb from 'containers/navs/Breadcrumb';
 import { NavLink } from 'react-router-dom';
 import AddCustomer from './modal-form/add-customer';
+// import {adminRoot} from '../../../constants/defaultValues';
 
 const CustromerList = ({ match }) => {
+  console.log(match)
   const [show, setShow] = useState();
   const [toggle, setToggle] = useState({
     orderBy: { display: 'none' },
@@ -328,7 +330,7 @@ const CustromerList = ({ match }) => {
                         </p>
                         <NavLink
                           className="list-item-heading mb-0 truncate w-30 w-xs-100 ml-1"
-                          to="Pages.Product.Detail.html"
+                          to='/app/customer-menu/profile'
                         >
                           56037 <span className='ml-5'>Bat Gerel</span>
                         </NavLink>
