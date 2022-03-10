@@ -3,7 +3,8 @@ import { Input, Row } from 'reactstrap';
 // import IntlMessages from 'helpers/IntlMessages';
 import { Colxx, Separator } from 'components/common/CustomBootstrap';
 import Breadcrumb from 'containers/navs/Breadcrumb';
-import { NavLink } from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
+import { adminRoot } from 'constants/defaultValues';
 
 const AccountList = ({ match }) => {
   const [toggle, setToggle] = useState({
@@ -17,13 +18,14 @@ const AccountList = ({ match }) => {
         <Colxx xxs="12">
           <Breadcrumb heading="IPO list" match={match} />
           <div className="top-right-button-container">
+            <NavLink to={`${adminRoot}/ipo/add-article`}>
             <button
               type="button"
-              // onClick={() => setShow(true)}
               className="btn btn-primary btn-lg top-right-button mr-1"
             >
-          ADD ARTICLE
+              ADD ARTICLE
             </button>
+            </NavLink>
             <button
               type="button"
               // onClick={() => setShow(true)}
@@ -266,35 +268,48 @@ const AccountList = ({ match }) => {
               </div>
 
               <div className="row">
-                <div className="">
-                  <ul>
-                    <li>Image</li>
+                <div className="w-90 py-3">
+                  <ul className="d-flex justify-content-between">
+                    <li className="li">Image</li>
+                    <li className="li">Stock name</li>
+                    <li className="li">Stock full name</li>
+                    <li className="li">Start date</li>
+                    <li className="li">End date</li>
+                    <li className="li">Limit</li>
+                    <li className="li">Status</li>
                   </ul>
                 </div>
                 <div className="col-12 list" data-check-all="checkAll">
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
+                        <p className="mb-0 text-small w-15 u">U</p>
                         <NavLink
-                          className="list-item-heading mb-0 truncate w-40 w-xs-100"
-                          to="Pages.Product.Detail.html"
+                          className="list-item-heading mb-0 truncate w-20"
+                          to="/customer-menu/profile"
                         >
-                          Marble Cake
+                          <span className="ml-2">ADL</span>
                         </NavLink>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          Cakes
+
+                        <p className="mb-0 text-muted text-small w-20">
+                          Адуун Чулуун
                         </p>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          02.04.2018
+                        <p className="mb-0 text-muted text-small w-20">
+                          2020/05/20 20:00
                         </p>
-                        <div className="w-15 w-xs-100">
-                          <span className="badge badge-pill badge-secondary">
-                            ON HOLD
+                        <p className="mb-0 text-muted text-small w-15">
+                          2020/05/20 20:00
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15">1500</p>
+
+                        <div className="w-15">
+                          <span className="badge badge-pill badge-secondary verified w-80 ">
+                            ACTIVE
                           </span>
                         </div>
                       </div>
 
-                      <div className="custom-control custom-checkbox mb-1 align-self-center pr-4">
+                      <div className="custom-control custom-checkbox mb-1 align-self-center pr-2">
                         <Input
                           type="checkbox"
                           className="custom-control-input"
@@ -306,26 +321,33 @@ const AccountList = ({ match }) => {
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
+                        <p className="mb-0 text-small w-15 u">U</p>
                         <NavLink
-                          className="list-item-heading mb-0 truncate w-40 w-xs-100"
-                          to="Pages.Product.Detail.html"
+                          className="list-item-heading mb-0 truncate w-20"
+                          to="/customer-menu/profile"
                         >
-                          Marble Cake
+                          <span className="ml-2">ADL</span>
                         </NavLink>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          Cakes
+
+                        <p className="mb-0 text-muted text-small w-20">
+                          Адуун Чулуун
                         </p>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          02.04.2018
+                        <p className="mb-0 text-muted text-small w-20">
+                          2020/05/20 20:00
                         </p>
-                        <div className="w-15 w-xs-100">
-                          <span className="badge badge-pill badge-secondary">
-                            ON HOLD
+                        <p className="mb-0 text-muted text-small w-15">
+                          2020/05/20 20:00
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15">1500</p>
+
+                        <div className="w-15">
+                          <span className="badge badge-pill badge-secondary delete w-80">
+                            CLOSED
                           </span>
                         </div>
                       </div>
 
-                      <div className="custom-control custom-checkbox mb-1 align-self-center pr-4">
+                      <div className="custom-control custom-checkbox mb-1 align-self-center pr-2">
                         <Input
                           type="checkbox"
                           className="custom-control-input"
@@ -337,26 +359,33 @@ const AccountList = ({ match }) => {
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
+                        <p className="mb-0 text-small w-15 u">U</p>
                         <NavLink
-                          className="list-item-heading mb-0 truncate w-40 w-xs-100"
-                          to="Pages.Product.Detail.html"
+                          className="list-item-heading mb-0 truncate w-20"
+                          to="/customer-menu/profile"
                         >
-                          Marble Cake
+                          <span className="ml-2">ADL</span>
                         </NavLink>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          Cakes
+
+                        <p className="mb-0 text-muted text-small w-20">
+                          Адуун Чулуун
                         </p>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          02.04.2018
+                        <p className="mb-0 text-muted text-small w-20">
+                          2020/05/20 20:00
                         </p>
-                        <div className="w-15 w-xs-100">
-                          <span className="badge badge-pill badge-secondary">
-                            ON HOLD
+                        <p className="mb-0 text-muted text-small w-15">
+                          2020/05/20 20:00
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15">1500</p>
+
+                        <div className="w-15">
+                          <span className="badge badge-pill badge-secondary verified w-80">
+                            ACTIVE
                           </span>
                         </div>
                       </div>
 
-                      <div className="custom-control custom-checkbox mb-1 align-self-center pr-4">
+                      <div className="custom-control custom-checkbox mb-1 align-self-center pr-2">
                         <Input
                           type="checkbox"
                           className="custom-control-input"
@@ -368,26 +397,33 @@ const AccountList = ({ match }) => {
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
+                        <p className="mb-0 text-small w-15 u">U</p>
                         <NavLink
-                          className="list-item-heading mb-0 truncate w-40 w-xs-100"
-                          to="Pages.Product.Detail.html"
+                          className="list-item-heading mb-0 truncate w-20"
+                          to="/customer-menu/profile"
                         >
-                          Marble Cake
+                          <span className="ml-2">ADL</span>
                         </NavLink>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          Cakes
+
+                        <p className="mb-0 text-muted text-small w-20">
+                          Адуун Чулуун
                         </p>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          02.04.2018
+                        <p className="mb-0 text-muted text-small w-20">
+                          2020/05/20 20:00
                         </p>
-                        <div className="w-15 w-xs-100">
-                          <span className="badge badge-pill badge-secondary">
-                            ON HOLD
+                        <p className="mb-0 text-muted text-small w-15">
+                          2020/05/20 20:00
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15">1500</p>
+
+                        <div className="w-15">
+                          <span className="badge badge-pill badge-secondary verified w-80">
+                            ACTIVE
                           </span>
                         </div>
                       </div>
 
-                      <div className="custom-control custom-checkbox mb-1 align-self-center pr-4">
+                      <div className="custom-control custom-checkbox mb-1 align-self-center pr-2">
                         <Input
                           type="checkbox"
                           className="custom-control-input"
@@ -399,26 +435,33 @@ const AccountList = ({ match }) => {
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
+                        <p className="mb-0 text-small w-15 u">U</p>
                         <NavLink
-                          className="list-item-heading mb-0 truncate w-40 w-xs-100"
-                          to="Pages.Product.Detail.html"
+                          className="list-item-heading mb-0 truncate w-20"
+                          to="/customer-menu/profile"
                         >
-                          Marble Cake
+                          <span className="ml-2">ADL</span>
                         </NavLink>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          Cakes
+
+                        <p className="mb-0 text-muted text-small w-20">
+                          Адуун Чулуун
                         </p>
-                        <p className="mb-0 text-muted text-small w-15 w-xs-100">
-                          02.04.2018
+                        <p className="mb-0 text-muted text-small w-20">
+                          2020/05/20 20:00
                         </p>
-                        <div className="w-15 w-xs-100">
-                          <span className="badge badge-pill badge-secondary">
-                            ON HOLD
+                        <p className="mb-0 text-muted text-small w-15">
+                          2020/05/20 20:00
+                        </p>
+                        <p className="mb-0 text-muted text-small w-15">1500</p>
+
+                        <div className="w-15">
+                          <span className="badge badge-pill badge-secondary delete w-80">
+                            CLOSED
                           </span>
                         </div>
                       </div>
 
-                      <div className="custom-control custom-checkbox mb-1 align-self-center pr-4">
+                      <div className="custom-control custom-checkbox mb-1 align-self-center pr-2">
                         <Input
                           type="checkbox"
                           className="custom-control-input"
