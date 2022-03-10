@@ -14,7 +14,9 @@ const AddArtical = () => {
                             <input type='date' className='input' name="date" />
                             
                             <p className='name mt-3'>Icon</p>
-                            <input type='file' className='input' name="name" />
+                            <div className='icon'>
+                               <input type='text' name='text' className='input' /> <button type='submit' className='browse'>Browse</button>
+                            </div>
                         </div>
 
                         <div className='col-lg-4 col-sm-4 col-md-4 col-12'>
