@@ -51,7 +51,10 @@ module.exports = {
   'menu.search': 'Search',
   'menu.request': 'Requests',
   'menu.report':'Report',
-  'menu.ipo':'IPO',
+  'menu.ipo':'IPO Market',
+  'menu.ipolist':'IPO list',
+  'menu.secondary_market_list':'Secondary Market list',
+  'menu.article':'Articles',
   'menu.setting':'Settings',
   'menu.order-list': 'Order list',
 

@@ -78,8 +78,7 @@ li.glide__slide.mx-2 {
   font-size: 48px;
   line-height: 76px;
   text-align: center;
-  color: #0BB783;
-  
+  color: #0BB783;  
 }
 .li,.td {
   font-style: normal;
@@ -181,15 +180,6 @@ a.list-item-heading {
   .box {
     margin-top: 1rem;
   }
-<<<<<<< HEAD
-  .min-width-zero {
-    height: auto;
-  }
-  li.glide__slide.mx-2 {
-    height: 215px;
-    width: 100%;
-  }
-=======
 }
 
 .form-select{
@@ -202,5 +192,4 @@ background-color:#FFFFFF;
 border: 1px solid #D7D7D7;
 box-sizing: border-box;
 
->>>>>>> 2748544b8050fa97d130a6e85a6629deb6e5b862
 }
