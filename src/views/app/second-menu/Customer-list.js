@@ -277,7 +277,6 @@ const CustromerList = ({ match }) => {
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-<<<<<<< HEAD
                       <p className="mb-0 text-small w-15 w-xs-15 u">
                           U
                         </p>
@@ -286,18 +285,10 @@ const CustromerList = ({ match }) => {
                      
 
                           className="list-item-heading mb-0 truncate w-40 w-xs-15"
-=======
-                      <p className="mb-0 text-small w-15 u">
-                          U
-                        </p>
-                        <NavLink
-                          className="list-item-heading mb-0 truncate w-40"
->>>>>>> 2748544b8050fa97d130a6e85a6629deb6e5b862
                           to='/customer-menu/profile'
                         >
                           56037 <span className='ml-5'>Bat Gerel</span>
                         </NavLink>
-<<<<<<< HEAD
                         <p className="mb-0 text-muted text-small w-15 w-xs-15">
                           gerel@mail.com
                         </p>
@@ -314,24 +305,6 @@ const CustromerList = ({ match }) => {
                           1.000.000₮
                         </p>
                         <p className="mb-0 text-muted text-small w-15 w-xs-15">
-=======
-                        <p className="mb-0 text-muted text-small w-15">
-                          gerel@mail.com
-                        </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          05/28/2020
-                        </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          УШ67172808
-                        </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          5011234567
-                        </p>
-                        <p className="mb-0 text-muted text-small w-15">
-                          1.000.000₮
-                        </p>
-                        <p className="mb-0 text-muted text-small w-15">
->>>>>>> 2748544b8050fa97d130a6e85a6629deb6e5b862
                           91216778
                         </p>
                         <div className="w-15">

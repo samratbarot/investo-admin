@@ -29,21 +29,22 @@ const CustomerProfile = ({ match }) => {
             </button>
 
           </div>
-          <Separator className="mb-5" />
+          
         </Colxx>
       </Row>
       <Row>
         <Colxx xxs="12" className="mb-4">
           <section>
             <div className="container-fluid disable-text-selection">
-              <div className='col-lg-3'>
+              <div className='col-lg-3 pl-0'>
                   <div className='d-flex justify-content-between'>
                       <NavLink to="#"><p className='text-green mb-0'>PROFILE</p></NavLink>
                       <NavLink to="#"><p className='text mb-0'>OWNED IPO</p></NavLink>
                       <NavLink to="#"><p className='text mb-0'>TRANSACTION</p></NavLink>
                   </div>
-                  <hr className='mt-0'/>
                 </div>
+                <Separator className="mb-5" />
+
               <div className="row">
                 <div className='col-lg-3 col-sm-3 col-md-3 col-12'>
                   <div className='main-box'>
