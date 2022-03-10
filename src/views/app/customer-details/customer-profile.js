@@ -3,6 +3,7 @@ import { Row } from 'reactstrap';
 // import IntlMessages from 'helpers/IntlMessages';
 import { Colxx, Separator } from 'components/common/CustomBootstrap';
 import Breadcrumb from 'containers/navs/Breadcrumb';
+import { NavLink } from 'react-router-dom';
 // import { NavLink } from 'react-router-dom';
 
 
@@ -35,13 +36,20 @@ const CustomerProfile = ({ match }) => {
         <Colxx xxs="12" className="mb-4">
           <section>
             <div className="container-fluid disable-text-selection">
-
+              <div className='col-lg-3'>
+                  <div className='d-flex justify-content-between'>
+                      <NavLink to="#"><p className='text-green mb-0'>PROFILE</p></NavLink>
+                      <NavLink to="#"><p className='text mb-0'>OWNED IPO</p></NavLink>
+                      <NavLink to="#"><p className='text mb-0'>TRANSACTION</p></NavLink>
+                  </div>
+                  <hr className='mt-0'/>
+                </div>
               <div className="row">
                 <div className='col-lg-3 col-sm-3 col-md-3 col-12'>
                   <div className='main-box'>
                     <div className='row'>
                       <div className='col-lg-6 col-6'>
-                        <p className="mb-0 text-small w-xs-100 u">
+                        <p className="mb-0 text-small w-xs-15 u">
                           U
                         </p>
                       </div>
