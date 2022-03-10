@@ -57,7 +57,10 @@ const AccountList = ({ match }) => {
               >
                 <span className="sr-only">Toggle Dropdown</span>
               </button>
-              <div className="dropdown-menu dropdown-menu-right" style={toggle.checkAll}>
+              <div
+                className="dropdown-menu dropdown-menu-right"
+                style={toggle.checkAll}
+              >
                 <NavLink className="dropdown-item" to="/abc">
                   Action
                 </NavLink>
@@ -166,7 +169,7 @@ const AccountList = ({ match }) => {
                       </span>
                       <div className="d-block d-md-inline-block">
                         <div className="btn-group float-md-left mr-1 mb-1">
-                        <button
+                          <button
                             className="btn btn-outline-dark btn-xs dropdown-toggle"
                             type="button"
                             data-toggle="dropdown"
@@ -228,11 +231,13 @@ const AccountList = ({ match }) => {
                               };
                             })
                           }
-
                         >
                           20
                         </button>
-                        <div className="dropdown-menu dropdown-menu-right" style={toggle.pages}>
+                        <div
+                          className="dropdown-menu dropdown-menu-right"
+                          style={toggle.pages}
+                        >
                           <NavLink className="dropdown-item" to="/a">
                             10
                           </NavLink>
@@ -256,7 +261,7 @@ const AccountList = ({ match }) => {
               </div>
 
               <div className="row">
-              <div className="w-90 py-3">
+                <div className="w-90 py-3">
                   <ul className="d-flex justify-content-between">
                     <li className="li">Image</li>
                     <li className="li">ID</li>
@@ -282,29 +287,29 @@ const AccountList = ({ match }) => {
                           583
                         </NavLink>
                         <p className="mb-0 text-muted text-small w-15">
-                        2020/05/20 20:00
+                          2020/05/20 20:00
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        Bat Gerel
+                          Bat Gerel
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        gerel@mail.com
+                          gerel@mail.com
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        99887766
+                          99887766
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        Khan bank
+                          Khan bank
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        5050505050
+                          5050505050
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        150.000₮
+                          150.000₮
                         </p>
                         <div className="w-15">
                           <span className="badge badge-pill badge-secondary not-verified w-80">
-                          PROCESSING
+                            PROCESSING
                           </span>
                         </div>
                       </div>
@@ -329,29 +334,29 @@ const AccountList = ({ match }) => {
                           583
                         </NavLink>
                         <p className="mb-0 text-muted text-small w-15">
-                        2020/05/20 20:00
+                          2020/05/20 20:00
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        Bat Gerel
+                          Bat Gerel
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        gerel@mail.com
+                          gerel@mail.com
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        99887766
+                          99887766
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        Khan bank
+                          Khan bank
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        5050505050
+                          5050505050
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        150.000₮
+                          150.000₮
                         </p>
                         <div className="w-15">
                           <span className="badge badge-pill badge-secondary delete w-80">
-                          REJECTED
+                            REJECTED
                           </span>
                         </div>
                       </div>
@@ -376,29 +381,29 @@ const AccountList = ({ match }) => {
                           583
                         </NavLink>
                         <p className="mb-0 text-muted text-small w-15">
-                        2020/05/20 20:00
+                          2020/05/20 20:00
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        Bat Gerel
+                          Bat Gerel
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        gerel@mail.com
+                          gerel@mail.com
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        99887766
+                          99887766
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        Khan bank
+                          Khan bank
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        5050505050
+                          5050505050
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        150.000₮
+                          150.000₮
                         </p>
                         <div className="w-15">
                           <span className="badge badge-pill badge-secondary deactivate w-80">
-                          SUPERADMIN
+                            SUPERADMIN
                           </span>
                         </div>
                       </div>
@@ -423,29 +428,29 @@ const AccountList = ({ match }) => {
                           583
                         </NavLink>
                         <p className="mb-0 text-muted text-small w-15">
-                        2020/05/20 20:00
+                          2020/05/20 20:00
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        Bat Gerel
+                          Bat Gerel
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        gerel@mail.com
+                          gerel@mail.com
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        99887766
+                          99887766
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        Khan bank
+                          Khan bank
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        5050505050
+                          5050505050
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        150.000₮
+                          150.000₮
                         </p>
                         <div className="w-15">
                           <span className="badge badge-pill badge-secondary deactivate w-80">
-                          ADMIN
+                            ADMIN
                           </span>
                         </div>
                       </div>
@@ -470,29 +475,29 @@ const AccountList = ({ match }) => {
                           583
                         </NavLink>
                         <p className="mb-0 text-muted text-small w-15">
-                        2020/05/20 20:00
+                          2020/05/20 20:00
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        Bat Gerel
+                          Bat Gerel
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        gerel@mail.com
+                          gerel@mail.com
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        99887766
+                          99887766
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        Khan bank
+                          Khan bank
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        5050505050
+                          5050505050
                         </p>
                         <p className="mb-0 text-muted text-small w-15">
-                        150.000₮
+                          150.000₮
                         </p>
                         <div className="w-15">
                           <span className="badge badge-pill badge-secondary verified w-80">
-                          CONFIRMED
+                            CONFIRMED
                           </span>
                         </div>
                       </div>
@@ -555,7 +560,7 @@ const AccountList = ({ match }) => {
           </section>
         </Colxx>
       </Row>
-      <AddWithdraw show={show} setShow={setShow}/>
+      <AddWithdraw show={show} setShow={setShow} />
     </>
   );
 };
