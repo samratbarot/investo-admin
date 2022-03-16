@@ -20,7 +20,7 @@ const Second = ({ match }) => {
                                 <div className="btn btn-primary btn-lg pl-4 pr-0 check-button">
                                     <div className="custom-control custom-checkbox mb-0 d-inline-block">
                                         <input type="checkbox" className="custom-control-input" id="checkAll"/>
-                                        <span className="custom-control-label">&nbsp;</span>
+                                        {/* <span className="custom-control-label">&nbsp;</span> */}
                                     </div>
                                 </div>
                                 <button type="button"
@@ -243,7 +243,7 @@ const Second = ({ match }) => {
                           type="checkbox"
                           className="custom-control-input"
                         />
-                        <span className="custom-control-label">&nbsp;</span>
+                        {/* <span className="custom-control-label">&nbsp;</span> */}
                       </div>
                     </div>
                   </div>
@@ -274,7 +274,7 @@ const Second = ({ match }) => {
                           type="checkbox"
                           className="custom-control-input"
                         />
-                        <span className="custom-control-label">&nbsp;</span>
+                        {/* <span className="custom-control-label">&nbsp;</span> */}
                       </div>
                     </div>
                   </div>
@@ -305,7 +305,7 @@ const Second = ({ match }) => {
                           type="checkbox"
                           className="custom-control-input"
                         />
-                        <span className="custom-control-label">&nbsp;</span>
+                        {/* <span className="custom-control-label">&nbsp;</span> */}
                       </div>
                     </div>
                   </div>
@@ -336,7 +336,7 @@ const Second = ({ match }) => {
                           type="checkbox"
                           className="custom-control-input"
                         />
-                        <span className="custom-control-label">&nbsp;</span>
+                        {/* <span className="custom-control-label">&nbsp;</span> */}
                       </div>
                     </div>
                   </div>
@@ -367,7 +367,7 @@ const Second = ({ match }) => {
                           type="checkbox"
                           className="custom-control-input"
                         />
-                        <span className="custom-control-label">&nbsp;</span>
+                        {/* <span className="custom-control-label">&nbsp;</span> */}
                       </div>
                     </div>
                   </div>

@@ -88,6 +88,11 @@ class App extends React.Component {
                     exact
                     render={(props) => <ViewHome {...props} />}
                   />
+                  {/* <Route
+                    path="/owner-list"
+                    exact
+                    render={(props) => <OwnerList {...props} />}
+                  /> */}
                   {/*
                   <Redirect exact from="/" to={adminRoot} />
                   */}

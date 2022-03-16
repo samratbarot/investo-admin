@@ -72,7 +72,6 @@ li.glide__slide.mx-2 {
   padding: 0rem !important;
 } */
 .u {
-  background-color: #d7f9ef;
   font-style: normal;
   font-weight: 300;
   font-size: 48px;
@@ -205,7 +204,7 @@ a.list-item-heading {
 .input {
   width: 100%;
   height: 36px;
-  padding: 0 10px;
+  padding: 5px 10px;
 
   border: 1px solid #D7D7D7;
   box-sizing: border-box;
@@ -244,6 +243,35 @@ a.list-item-heading {
   text-align: center;
 
   color: #FFFFFF;
+}
+/* ipo-list  */ 
+.custom-control-input {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background: no-repeat 50% / 50% 50%;
+}
+/* add article */
+.category-select {
+  width: 100%;
+  height: 36px;
+
+  border: 1px solid #D7D7D7;
+  box-sizing: border-box;
+}
+.text-area {
+  width: 100%;
+  height: 206px;
+  border: 1px solid #D7D7D7;
+}
+/* owner-list */
+.ADL {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #212121;
 }
 @media (max-width:481px) {
   .box {

@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
+import OwnerList from './owner-list';
 
 const IpoList = React.lazy(() =>import('./ipo'));
 const ArticleList = React.lazy(()=>import('./araticles'))
@@ -55,6 +56,11 @@ const IpoMenu = ({ match }) => (
         path={`${match.url}/edit-article`}
         exact
         render={(props) => <EditArtical {...props} />}
+      />
+        <Route
+        path={`${match.url}/owner-list`}
+        exact
+        render={(props) => <OwnerList {...props} />}
       />
      
       <Redirect to="/error" />

@@ -4,6 +4,9 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 const Start = React.lazy(() =>
   import(/* webpackChunkName: "start" */ './start')
 );
+const Market = React.lazy(() =>
+  import(/* webpackChunkName: "market" */ './market')
+);
 const Gogo = ({ match }) => (
   <Suspense fallback={<div className="loading" />}>
     <Switch>
@@ -11,6 +14,10 @@ const Gogo = ({ match }) => (
       <Route
         path={`${match.url}/start`}
         render={(props) => <Start {...props} />}
+      />
+      <Route
+        path={`${match.url}/market`}
+        render={(props) => <Market {...props} />}
       />
       <Redirect to="/error" />
     </Switch>

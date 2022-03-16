@@ -5,6 +5,7 @@ import { Colxx, Separator } from 'components/common/CustomBootstrap';
 import Breadcrumb from 'containers/navs/Breadcrumb';
 import { NavLink } from 'react-router-dom';
 import { adminRoot } from '../../../constants/defaultValues';
+import apu from '../../../assets/img/article/apu.png';
 // import AddOrder from './modal-form/add-order';
 
 
@@ -38,7 +39,7 @@ const ArticleList = ({ match }) => {
                     className="custom-control-input"
                     id="checkAll"
                   />
-                  <span className="custom-control-label">&nbsp;</span>
+                  {/* <span className="custom-control-label">&nbsp;</span> */}
                 </div>
               </div>
               <button
@@ -280,10 +281,11 @@ const ArticleList = ({ match }) => {
                   </ul>
                 </div>
                 <div className="col-12 list" data-check-all="checkAll">
+                  <NavLink to={`${adminRoot}/ipo/owner-list`}>
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                        <p className="mb-0 text-small w-15 u">U</p>
+                        <p className="mb-0 text-small w-15 u"><img src={apu} alt="owner" className='w-100' /></p>
                         <NavLink
                           className="list-item-heading mb-0 truncate w-20"
                           to={`${adminRoot}/ipo/edit-article`}
@@ -322,14 +324,15 @@ const ArticleList = ({ match }) => {
                           type="checkbox"
                           className="custom-control-input"
                         />
-                        <span className="custom-control-label">&nbsp;</span>
+                        {/* <span className="custom-control-label">&nbsp;</span> */}
                       </div>
                     </div>
                   </div>
+                  </NavLink>
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                        <p className="mb-0 text-small w-15 u">U</p>
+                        <p className="mb-0 text-small w-15 u"><img src={apu} alt="owner" className='w-100' /></p>
                         <NavLink
                           className="list-item-heading mb-0 truncate w-20"
                           to="/customer-menu/profile"
@@ -368,14 +371,14 @@ const ArticleList = ({ match }) => {
                           type="checkbox"
                           className="custom-control-input"
                         />
-                        <span className="custom-control-label">&nbsp;</span>
+                        {/* <span className="custom-control-label">&nbsp;</span> */}
                       </div>
                     </div>
                   </div>
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                        <p className="mb-0 text-small w-15 u">U</p>
+                        <p className="mb-0 text-small w-15 u"><img src={apu} alt="owner" className='w-100' /></p>
                         <NavLink
                           className="list-item-heading mb-0 truncate w-20"
                           to="/customer-menu/profile"
@@ -414,14 +417,14 @@ const ArticleList = ({ match }) => {
                           type="checkbox"
                           className="custom-control-input"
                         />
-                        <span className="custom-control-label">&nbsp;</span>
+                        {/* <span className="custom-control-label">&nbsp;</span> */}
                       </div>
                     </div>
                   </div>
                   <div className="card d-flex flex-row mb-3">
                     <div className="d-flex flex-grow-1 min-width-zero">
                       <div className="card-body align-self-center d-flex flex-column flex-md-row justify-content-between min-width-zero align-items-md-center">
-                        <p className="mb-0 text-small w-15 u">U</p>
+                        <p className="mb-0 text-small w-15 u"><img src={apu} alt="owner" className='w-100' /></p>
                         <NavLink
                           className="list-item-heading mb-0 truncate w-20"
                           to="/customer-menu/profile"
@@ -460,7 +463,7 @@ const ArticleList = ({ match }) => {
                           type="checkbox"
                           className="custom-control-input"
                         />
-                        <span className="custom-control-label">&nbsp;</span>
+                        {/* <span className="custom-control-label">&nbsp;</span> */}
                       </div>
                     </div>
                   </div>

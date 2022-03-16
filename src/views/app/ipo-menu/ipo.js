@@ -43,7 +43,7 @@ const AccountList = ({ match }) => {
                     className="custom-control-input"
                     id="checkAll"
                   />
-                  <span className="custom-control-label">&nbsp;</span>
+                  {/* <span className="custom-control-label">&nbsp;</span> */}
                 </div>
               </div>
               <button
@@ -316,7 +316,7 @@ const AccountList = ({ match }) => {
                           type="checkbox"
                           className="custom-control-input"
                         />
-                        <span className="custom-control-label">&nbsp;</span>
+                        {/* <span className="custom-control-label">&nbsp;</span> */}
                       </div>
                     </div>
                   </div>
@@ -354,7 +354,7 @@ const AccountList = ({ match }) => {
                           type="checkbox"
                           className="custom-control-input"
                         />
-                        <span className="custom-control-label">&nbsp;</span>
+                        {/* <span className="custom-control-label">&nbsp;</span> */}
                       </div>
                     </div>
                   </div>
@@ -392,7 +392,7 @@ const AccountList = ({ match }) => {
                           type="checkbox"
                           className="custom-control-input"
                         />
-                        <span className="custom-control-label">&nbsp;</span>
+                        {/* <span className="custom-control-label">&nbsp;</span> */}
                       </div>
                     </div>
                   </div>
@@ -430,7 +430,7 @@ const AccountList = ({ match }) => {
                           type="checkbox"
                           className="custom-control-input"
                         />
-                        <span className="custom-control-label">&nbsp;</span>
+                        {/* <span className="custom-control-label">&nbsp;</span> */}
                       </div>
                     </div>
                   </div>
@@ -468,7 +468,7 @@ const AccountList = ({ match }) => {
                           type="checkbox"
                           className="custom-control-input"
                         />
-                        <span className="custom-control-label">&nbsp;</span>
+                        {/* <span className="custom-control-label">&nbsp;</span> */}
                       </div>
                     </div>
                   </div>

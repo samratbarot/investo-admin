@@ -3,6 +3,7 @@ import { Route, withRouter, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import '../../custom/style.css'
 import AppLayout from 'layout/AppLayout';
+// import OwnerList from './ipo-menu/owner-list';
 // import { ProtectedRoute, UserRole } from 'helpers/authHelper';
 
 const Gogo = React.lazy(() =>
@@ -24,9 +25,8 @@ const IpoPage = React.lazy(() =>
   import(/* webpackChunkName: "viwes-order-page" */ './ipo-menu')
 );
 const CustomerDetailsPage=React.lazy(() =>
-       import(/* webpackChunkName: "viwes-order-page" */ './customer-details')
-)
-
+  import(/* webpackChunkName: "viwes-order-page" */ './customer-details')
+);
 
 const App = ({ match }) => {
   return (

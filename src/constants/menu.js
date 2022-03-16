@@ -14,8 +14,8 @@ const data = [
       },
       {
         icon: 'simple-icon-dollar-sign',
-        label: 'menu.market',
-        to: `${adminRoot}/gogo/start`,
+        label: 'Market',
+        to: `${adminRoot}/gogo/market`,
       },
     ],
   },
@@ -38,7 +38,7 @@ const data = [
       },
       {
         icon: 'iconsminds-monitor-analytics',
-        label: 'menu.activities ',
+        label: 'Activities ',
         to: `${adminRoot}/second-menu/second/activies`,
       },
     ],
