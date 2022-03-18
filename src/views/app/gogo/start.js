@@ -79,7 +79,7 @@ const Start = ({ match }) => (
                 </div>
                 <div className="row">
                   <div className="col-md-12 col-lg-4 mb-4">
-                  <div className="card h-100 p-4">
+                    <div className="card h-100 p-4">
                       <div className="card-body">
                         <h5 className="card-title">Top stocks</h5>
 
